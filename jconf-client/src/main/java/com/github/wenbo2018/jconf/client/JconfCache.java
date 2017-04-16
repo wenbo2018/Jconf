@@ -1,7 +1,7 @@
 package com.github.wenbo2018.jconf.client;
 
 import com.github.wenbo2018.jconf.client.exception.JconfException;
-import com.github.wenbo2018.jconf.client.extension.ExtensionLoader;
+import com.github.wenbo2018.jconf.common.extension.ExtensionLoader;
 import com.github.wenbo2018.jconf.client.listener.ConfigChangeEvent;
 import com.github.wenbo2018.jconf.client.listener.JconfEventListener;
 import com.github.wenbo2018.jconf.client.listener.api.ConfigInfoChangeListener;

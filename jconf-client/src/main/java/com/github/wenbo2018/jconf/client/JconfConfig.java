@@ -8,7 +8,5 @@ import com.github.wenbo2018.jconf.client.listener.ConfigChangeListener;
 public interface JconfConfig {
 
      String getValue(String key);
-     void addConfigChangeListener(ConfigChangeListener configChangeListener);
-     void removeConfigChangeListener(ConfigChangeListener configChangeListener);
 
 }

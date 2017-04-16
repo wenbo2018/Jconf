@@ -24,6 +24,9 @@ public class ConfigChangeEvent {
         this.value = value;
     }
 
+    public ConfigChangeEvent() {
+    }
+
     public ConfigChangeEvent(String key, String value) {
         this.key = key;
         this.value = value;
