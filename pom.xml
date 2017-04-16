@@ -1,25 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.wenbo2018</groupId>
-  <name>Jconf-parent</name>
-  <artifactId>Jconf-parent</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0.0</version>
-  <url>http://maven.apache.org</url>
-  <properties>
-    <skip_maven_deploy>true</skip_maven_deploy>
-  </properties>
-  <modules>
-    <module>jconf-core</module>
-    <module>jconf-web</module>
-    <module>jconf-client</module>
-  </modules>
-  <dependencies>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-log4j12</artifactId>
-      <version>1.7.10</version>
-    </dependency>
-  </dependencies>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.github.wenbo2018</groupId>
+    <name>Jconf-parent</name>
+    <artifactId>Jconf-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <url>http://maven.apache.org</url>
+    <properties>
+        <skip_maven_deploy>true</skip_maven_deploy>
+    </properties>
+    <modules>
+        <module>jconf-core</module>
+        <module>jconf-web</module>
+        <module>jconf-client</module>
+        <module>jconf-common</module>
+    </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.10</version>
+        </dependency>
+    </dependencies>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.0.RELEASE</version>
+    </parent>
 </project>
