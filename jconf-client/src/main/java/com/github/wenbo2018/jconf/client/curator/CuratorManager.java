@@ -57,4 +57,9 @@ public class CuratorManager {
         }
         return curatorClient;
     }
+
+    public  CuratorClient getCuratorClient(){
+        CuratorClient curatorClient=null;
+        return curatorClient;
+    }
 }

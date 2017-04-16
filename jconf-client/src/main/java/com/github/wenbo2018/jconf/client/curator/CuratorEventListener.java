@@ -1,6 +1,9 @@
 package com.github.wenbo2018.jconf.client.curator;
 
 
+import com.github.wenbo2018.jconf.client.listener.ConfigChangeListener;
+import com.github.wenbo2018.jconf.client.listener.DefaultConfigChangeListener;
+import com.github.wenbo2018.jconf.client.listener.JconfEventListener;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.api.CuratorEvent;
 import org.apache.curator.framework.api.CuratorListener;
@@ -16,11 +19,8 @@ import org.slf4j.LoggerFactory;
 public class CuratorEventListener implements CuratorListener {
 
     private Logger logger = LoggerFactory.getLogger(CuratorEventListener.class);
-
-
     private CuratorClient client;
-
-
+    private ConfigChangeListener configChangeListener=new DefaultConfigChangeListener();
     public CuratorEventListener(CuratorClient client) {
         this.client = client;
     }
