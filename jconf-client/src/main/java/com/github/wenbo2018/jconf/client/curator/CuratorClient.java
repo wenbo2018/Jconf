@@ -1,4 +1,4 @@
-package com.github.wenbo2018.jconf.client;
+package com.github.wenbo2018.jconf.client.curator;
 
 
 import com.github.wenbo2018.jconf.client.common.DefaultThreadFactory;
@@ -30,7 +30,7 @@ public class CuratorClient {
     private CuratorFramework zookeeperClient;
 
     private static ExecutorService curatorEventListenerThreadPool = Executors
-            .newCachedThreadPool( new DefaultThreadFactory("fox-Curator-Event-Listener"));
+            .newCachedThreadPool( new DefaultThreadFactory("Jconf-Curator-Event-Listener"));
 
     public CuratorClient(String zkAddress) throws InterruptedException {
         this.address = zkAddress;
@@ -72,12 +72,6 @@ public class CuratorClient {
         return zookeeperClient;
     }
 
-    /**
-     * 获取根据path获取节点信息
-     *
-     * @param path
-     * @return
-     */
     public List<String> getChild(String path) throws Exception {
         if (!exists(path)) {
             throw new RuntimeException(String.format("can not find any service node on path: %s", path));
@@ -123,14 +117,7 @@ public class CuratorClient {
         }
     }
 
-    /**
-     * 给存在的节点重新设值
-     *
-     * @param path
-     * @param value
-     * @param version
-     * @throws Exception
-     */
+
     public void set(String path, Object value, int version) throws Exception {
         byte[] bytes = (value == null ? new byte[0] : value.toString().getBytes(CHARSET));
         if (exists(path, false)) {
@@ -143,23 +130,13 @@ public class CuratorClient {
     }
 
 
-    /**
-     * 创建零时节点
-     *
-     * @param node
-     * @param value
-     */
     public void create(String node, String value) throws Exception {
         byte[] bytes = (value == null ? new byte[0] : value.toString().getBytes(CHARSET));
         String addressNode = zookeeperClient.create().withMode(CreateMode.EPHEMERAL).forPath(node, bytes);
         LOGGER.info("create address node:", addressNode);
     }
 
-    /**
-     * 创建持久节点
-     *
-     * @param path
-     */
+
     public void creatrPersistentNode(String path) throws Exception {
         if (!exists(path, false)) {
             zookeeperClient.create().creatingParentsIfNeeded().forPath(path);
@@ -167,12 +144,6 @@ public class CuratorClient {
         }
     }
 
-    /**
-     * 删除节点
-     *
-     * @param path
-     * @return
-     */
     public void delete(String path) throws Exception {
         zookeeperClient.delete().forPath(path);
         if (LOGGER.isInfoEnabled()) {
@@ -180,11 +151,7 @@ public class CuratorClient {
         }
     }
 
-    /***
-     * 删除存在的path
-     * @param path
-     * @throws Exception
-     */
+
     public void deleteIfExists(String path) throws Exception {
         if (exists(path, false)) {
             delete(path);

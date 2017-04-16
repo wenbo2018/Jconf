@@ -1,4 +1,4 @@
-package com.github.wenbo2018.jconf.client;
+package com.github.wenbo2018.jconf.client.curator;
 
 import org.apache.curator.ensemble.EnsembleProvider;
 

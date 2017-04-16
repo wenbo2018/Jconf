@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.wenbo2018.springboot.dao.UserDao">
+
+    <resultMap id="BaseResultMap" type="com.github.wenbo2018.springboot.dto.User">
+        <result column="Id" property="id" jdbcType="INTEGER" />
+        <result column="UserName" property="username" jdbcType="VARCHAR" />
+        <result column="PassWord" property="password" jdbcType="VARCHAR" />
+        <result column="Email" property="email" jdbcType="VARCHAR" />
+        <result column="Au" property="au" jdbcType="INTEGER" />
+    </resultMap>
+
+
+    <insert id="add" parameterType="com.github.wenbo2018.springboot.dto.User" >
+        insert into User (
+        UserName,
+        PassWord,
+        Au,Email,Status
+        )
+        values (
+        #{username},
+        #{password},
+        #{au},#{email},#{status}
+        )
+    </insert>
+
+    <select id="list"  resultMap="BaseResultMap">
+        SELECT * FROM User
+    </select>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM User WHERE Id=#{id}
+    </delete>
+
+    <select id="load" parameterType="int" resultMap="BaseResultMap">
+        SELECT * FROM User WHERE Id=#{id}
+    </select>
+
+    <update id="update" parameterType="com.github.wenbo2018.springboot.dto.User">
+        UPDATE  User SET  UserName=#{username}, Password=#{password},Au=#{au},Email=#{email}
+    </update>
+
+    <select id="queryByUserNameAndPassWord"  resultMap="BaseResultMap">
+        SELECT *  FROM User WHERE UserName=#{0} and  PassWord=#{1}
+    </select>
+
+    <select id="loadByUserName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        SELECT * FROM User WHERE  UserName=#{username}
+    </select>
+
+</mapper>
