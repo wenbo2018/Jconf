@@ -21,7 +21,7 @@ public class CuratorEventListener implements CuratorListener {
     private Logger logger = LoggerFactory.getLogger(CuratorEventListener.class);
     private CuratorClient client;
     private ConfigChangeListener configChangeListener = new DefaultConfigChangeListener();
-    private static final String JCONF_PREFIX="JCONF/CONFIG";
+    private static final String JCONF_PREFIX="/JCONF/CONFIG";
 
     public CuratorEventListener(CuratorClient client) {
         this.client = client;
@@ -36,7 +36,7 @@ public class CuratorEventListener implements CuratorListener {
                     logEvent(watchedEvent);
                     processEvent(watchedEvent);
                 } catch (Exception e) {
-                    logger.error("curator event process fail");
+                    logger.error("curator event process fail",e);
                 }
             }
         }
@@ -60,7 +60,7 @@ public class CuratorEventListener implements CuratorListener {
 
 
     public ConfigInfo parseConfig(String path){
-        if (path == null||path.startsWith(JCONF_PREFIX)) {
+        if (path == null||!path.startsWith(JCONF_PREFIX)) {
             return null;
         }
         String key=path.substring(JCONF_PREFIX.length()+1);

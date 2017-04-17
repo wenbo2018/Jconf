@@ -5,6 +5,8 @@ import com.github.wenbo2018.jconf.common.config.ConfigManagerLoader;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -19,6 +21,7 @@ public class CuratorManager {
     private static ConcurrentMap<String, CuratorClient> curatorClientCache = new ConcurrentHashMap<>();
     private static ConfigManager configManager;
     private static String ZOOKEEPER_REGISTER_ADDRESS="zookeeper.register.address";
+    private static List<CuratorClient> clientList=new ArrayList<>();
 
     public static CuratorManager getInstance() {
         if (!isInit) {
@@ -43,6 +46,7 @@ public class CuratorManager {
                 String address=addressArray[i];
                 CuratorClient curatorClient=createCuratorClient(address);
                 curatorClientCache.put(address,curatorClient);
+                clientList.add(curatorClient);
             }
         }
     }
@@ -58,8 +62,11 @@ public class CuratorManager {
         return curatorClient;
     }
 
-    public  CuratorClient getCuratorClient(){
+    public  CuratorClient  getCuratorClient(){
         CuratorClient curatorClient=null;
-        return curatorClient;
+        if (clientList.size()<=0) {
+            logger.error("not found one curator client");
+        }
+        return clientList.get(0);
     }
 }
