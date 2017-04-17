@@ -1,5 +1,6 @@
 package com.github.wenbo2018.jconf.web.service;
 
+import com.github.pagehelper.PageInfo;
 import com.github.wenbo2018.jconf.web.dto.Config;
 
 /**
@@ -8,4 +9,5 @@ import com.github.wenbo2018.jconf.web.dto.Config;
 
 public interface ConfigService {
     void add(Config config);
+    PageInfo<Config> queryByPage(Integer pageIndex, Integer pageSize);
 }

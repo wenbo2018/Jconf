@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Created by shenwenbo on 2017/4/14.
  */
 @SpringBootApplication
-@MapperScan("com.github.webbo2018.jconf.web.dao")
+@MapperScan("com.github.wenbo2018.jconf.web.dao")
 public class Application {
     private Logger logger= LoggerFactory.getLogger(Application.class);
 

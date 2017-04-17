@@ -1,7 +1,9 @@
 package com.github.wenbo2018.jconf.web.dto;
 
-import lombok.Getter;
-import lombok.Setter;
+import org.codehaus.jackson.map.annotate.JsonSerialize;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.util.Date;
 
 /**
  * Created by shenwenbo on 2017/4/16.
@@ -15,6 +17,8 @@ public class Config {
     private int  projectId;
     private String userName;
     private String userEmail;
+
+    private Date dateTime;
 
     public int getId() {
         return id;
@@ -70,5 +74,14 @@ public class Config {
 
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
+    }
+
+
+    public Date getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(Date dateTime) {
+        this.dateTime = dateTime;
     }
 }

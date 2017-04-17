@@ -16,24 +16,28 @@ import javax.annotation.Resource;
  * Created by shenwenbo on 2017/4/16.
  */
 @RunWith(SpringJUnit4ClassRunner.class) // SpringJUnit支持，由此引入Spring-Test框架支持！
-@SpringApplicationConfiguration(classes =Application.class) // 指定我们SpringBoot工程的
+@SpringApplicationConfiguration(classes = Application.class) // 指定我们SpringBoot工程的
 public class ConfigServiceTest {
 
-//    @Autowired
-//    ConfigService configService;
+    @Autowired
+    ConfigService configService;
+
     @Test
     public void add() {
-        RegistryManager.getInstance();
-//        Config config=new Config();
-//        config.setKey("key");
-//        config.setValue("wenbo2018");
-//        config.setEnv(1);
-//        config.setProjectId(12);
-//        config.setUserName("wenbo");
-//        config.setUserEmail("123@qq.com");
-//
-//        configService.add(config);
-        RegistryManager.registerService("key","spoomjuijhnj");
-        System.out.println(RegistryManager.getService("key"));
+//        RegistryManager.getInstance();
+
+        for (int i = 1; i < 100; i++) {
+            Config config = new Config();
+            config.setKey("key"+i);
+            config.setValue("wenb2018"+i);
+            config.setEnv(i);
+            config.setProjectId(i);
+            config.setUserName("wenbo"+1);
+            config.setUserEmail("1sdf23+"+i+"@qq.com");
+            configService.add(config);
+        }
+
+//        RegistryManager.registerService("key","spoomjuijhnj");
+//        System.out.println(RegistryManager.getService("key"));
     }
 }
