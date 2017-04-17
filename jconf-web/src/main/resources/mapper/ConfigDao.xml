@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.wenbo2018.jconf.web.dao.ConfigDao">
 
-    <resultMap id="BaseResultMap" type="com.github.webbo2018.jconf.web.dto.Config">
+    <resultMap id="BaseResultMap" type="com.github.wenbo2018.jconf.web.dto.Config">
         <result column="Id" property="id" jdbcType="INTEGER" />
         <result column="Key" property="key" jdbcType="VARCHAR" />
         <result column="Value" property="value" jdbcType="VARCHAR" />
@@ -13,7 +13,7 @@
         <result column="UserEmail" property="userEmail" jdbcType="VARCHAR" />
     </resultMap>
 
-    <insert id="add" parameterType="com.github.webbo2018.jconf.web.dto.Config">
+    <insert id="add" parameterType="com.github.wenbo2018.jconf.web.dto.Config">
         insert into Config (
         Key,
         Value,

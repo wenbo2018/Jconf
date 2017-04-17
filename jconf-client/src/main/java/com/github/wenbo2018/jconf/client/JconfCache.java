@@ -62,12 +62,14 @@ public class JconfCache {
 
         @Override
         public void configChange(ConfigChangeEvent configChangeEvent) {
+            logger.info("config change{};",configChangeEvent.toString());
             String key = configChangeEvent.getKey();
             String value = configChangeEvent.getValue();
             if (!jconfCache.containsKey(key)) {
                 jconfCache.put(key,value);
             }
             jconfCache.put(key,value);
+            logger.info("config change success{};",configChangeEvent.toString());
         }
     }
 
