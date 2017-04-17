@@ -84,4 +84,18 @@ public class Config {
     public void setDateTime(Date dateTime) {
         this.dateTime = dateTime;
     }
+
+    @Override
+    public String toString() {
+        return "Config{" +
+                "id=" + id +
+                ", key='" + key + '\'' +
+                ", value='" + value + '\'' +
+                ", env=" + env +
+                ", projectId=" + projectId +
+                ", userName='" + userName + '\'' +
+                ", userEmail='" + userEmail + '\'' +
+                ", dateTime=" + dateTime +
+                '}';
+    }
 }

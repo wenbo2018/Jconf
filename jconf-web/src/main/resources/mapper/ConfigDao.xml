@@ -39,5 +39,22 @@
         SELECT * FROM Config
     </select>
 
+    <update id="update"  parameterType="int" >
+        UPDATE Condig SET
+        Config_Value=#{value},
+        ProjectId=#{projectId},
+        Env=#{env},
+        UserName=#{userName},
+        UserEmail=#{userEmail} WHEN  Id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM Config WHERE Id=#{id};
+    </delete>
+
+    <select id="load" resultMap="BaseResultMap" parameterType="com.github.wenbo2018.jconf.web.dto.Config">
+        SELECT  *FROM  Config WHERE Id=#{id}
+    </select>
+
 
 </mapper>

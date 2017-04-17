@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: jconf-web
+Implementation-Version: 1.0.0
+Built-By: wenbo2018
+Implementation-Vendor-Id: com.github.wenbo2018
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.7.0_80
+Main-Class: ${start-class}
+

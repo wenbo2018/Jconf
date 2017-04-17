@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by shenwenbo on 2017/4/17.
  */
@@ -35,6 +38,15 @@ public class ConfigController {
         pageModel.setTotal((int) pageInfo.getTotal());
         pageModel.setPageSize(pageInfo.getPageSize());
         return pageModel;
+    }
+
+    @RequestMapping(value = "/confgDelete",method = RequestMethod.GET)
+    @ResponseBody
+    public Map<String,String> deleteConfig(int id){
+        Map<String,String> msg=new HashMap<>();
+        configService.delete(id);
+        msg.put("code",String.valueOf(200));
+        return msg;
     }
 
 
