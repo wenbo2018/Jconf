@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Jconf-parent.iml" filepath="$PROJECT_DIR$/Jconf-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jconf-client/jconf-client.iml" filepath="$PROJECT_DIR$/jconf-client/jconf-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jconf-common/jconf-common.iml" filepath="$PROJECT_DIR$/jconf-common/jconf-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jconf-core/jconf-core.iml" filepath="$PROJECT_DIR$/jconf-core/jconf-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jconf-web/jconf-web.iml" filepath="$PROJECT_DIR$/jconf-web/jconf-web.iml" />
+    </modules>
+  </component>
+</project>

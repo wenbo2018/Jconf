@@ -1,0 +1,39 @@
+2017-05-01 16:41:28,311 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 16:41:28,458 - Starting
+2017-05-01 16:41:28,471 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 16:41:28,471 - Client environment:host.name=192.168.1.101
+2017-05-01 16:41:28,471 - Client environment:java.version=1.7.0_80
+2017-05-01 16:41:28,471 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 16:41:28,472 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 16:41:28,472 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 16:41:28,472 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 16:41:28,472 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 16:41:28,472 - Client environment:java.compiler=<NA>
+2017-05-01 16:41:28,472 - Client environment:os.name=Mac OS X
+2017-05-01 16:41:28,472 - Client environment:os.arch=x86_64
+2017-05-01 16:41:28,472 - Client environment:os.version=10.12.4
+2017-05-01 16:41:28,472 - Client environment:user.name=wenbo.shen
+2017-05-01 16:41:28,472 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 16:41:28,472 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 16:41:28,473 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@462f4ae2
+2017-05-01 16:41:28,500 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 16:41:28,544 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 16:41:28,604 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300b3, negotiated timeout = 30000
+2017-05-01 16:41:28,613 - State change: CONNECTED
+2017-05-01 16:41:28,615 - zookeeper state changed to CONNECTED
+2017-05-01 16:41:29,618 - succeed to create zookeeper client, connected:true
+2017-05-01 16:41:29,620 - zk client success create123.206.9.140:
+2017-05-01 16:41:29,686 - value is null from zk config centerkey:
+2017-05-01 16:41:30,720 - value is null from zk config centerkey:
+2017-05-01 16:41:31,756 - value is null from zk config centerkey:
+2017-05-01 16:41:32,791 - value is null from zk config centerkey:
+2017-05-01 16:41:33,907 - value is null from zk config centerkey:
+2017-05-01 16:41:34,940 - value is null from zk config centerkey:
+2017-05-01 16:41:35,972 - value is null from zk config centerkey:
+2017-05-01 16:41:37,009 - value is null from zk config centerkey:
+2017-05-01 16:41:38,043 - value is null from zk config centerkey:
+2017-05-01 16:41:39,079 - value is null from zk config centerkey:
+2017-05-01 16:41:40,113 - value is null from zk config centerkey:
+2017-05-01 16:41:41,144 - value is null from zk config centerkey:
+2017-05-01 16:41:42,180 - value is null from zk config centerkey:
+2017-05-01 16:41:43,219 - value is null from zk config centerkey:
