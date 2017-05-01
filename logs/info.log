@@ -37,3 +37,125 @@
 2017-05-01 16:41:41,144 - value is null from zk config centerkey:
 2017-05-01 16:41:42,180 - value is null from zk config centerkey:
 2017-05-01 16:41:43,219 - value is null from zk config centerkey:
+2017-05-01 17:09:30,351 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 17:09:30,482 - Starting
+2017-05-01 17:09:30,496 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 17:09:30,496 - Client environment:host.name=192.168.1.101
+2017-05-01 17:09:30,496 - Client environment:java.version=1.7.0_80
+2017-05-01 17:09:30,496 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 17:09:30,496 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 17:09:30,496 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 17:09:30,496 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 17:09:30,497 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 17:09:30,497 - Client environment:java.compiler=<NA>
+2017-05-01 17:09:30,497 - Client environment:os.name=Mac OS X
+2017-05-01 17:09:30,497 - Client environment:os.arch=x86_64
+2017-05-01 17:09:30,497 - Client environment:os.version=10.12.4
+2017-05-01 17:09:30,497 - Client environment:user.name=wenbo.shen
+2017-05-01 17:09:30,497 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 17:09:30,497 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 17:09:30,498 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@13f948e
+2017-05-01 17:09:30,524 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 17:09:30,566 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 17:09:30,619 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300b4, negotiated timeout = 30000
+2017-05-01 17:09:30,629 - State change: CONNECTED
+2017-05-01 17:09:30,630 - zookeeper state changed to CONNECTED
+2017-05-01 17:09:31,635 - succeed to create zookeeper client, connected:true
+2017-05-01 17:09:31,639 - zk client success create123.206.9.140:
+2017-05-01 17:09:31,700 - value is null from zk config centerkey:
+2017-05-01 17:09:32,740 - value is null from zk config centerkey:
+2017-05-01 17:09:33,775 - value is null from zk config centerkey:
+2017-05-01 17:09:34,812 - value is null from zk config centerkey:
+2017-05-01 17:09:35,847 - value is null from zk config centerkey:
+2017-05-01 17:09:36,885 - value is null from zk config centerkey:
+2017-05-01 17:09:37,919 - value is null from zk config centerkey:
+2017-05-01 17:09:38,957 - value is null from zk config centerkey:
+2017-05-01 17:09:39,999 - value is null from zk config centerkey:
+2017-05-01 17:09:41,040 - value is null from zk config centerkey:
+2017-05-01 17:09:42,074 - value is null from zk config centerkey:
+2017-05-01 17:09:43,109 - value is null from zk config centerkey:
+2017-05-01 17:09:44,143 - value is null from zk config centerkey:
+2017-05-01 17:09:45,178 - value is null from zk config centerkey:
+2017-05-01 17:09:46,216 - value is null from zk config centerkey:
+2017-05-01 17:09:47,251 - value is null from zk config centerkey:
+2017-05-01 17:09:48,284 - value is null from zk config centerkey:
+2017-05-01 17:09:49,322 - value is null from zk config centerkey:
+2017-05-01 17:09:50,358 - value is null from zk config centerkey:
+2017-05-01 17:09:51,398 - value is null from zk config centerkey:
+2017-05-01 17:09:52,433 - value is null from zk config centerkey:
+2017-05-01 17:09:53,463 - value is null from zk config centerkey:
+2017-05-01 17:12:50,291 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 17:12:50,387 - Starting
+2017-05-01 17:12:50,398 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 17:12:50,398 - Client environment:host.name=192.168.1.101
+2017-05-01 17:12:50,398 - Client environment:java.version=1.7.0_80
+2017-05-01 17:12:50,398 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 17:12:50,399 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 17:12:50,399 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 17:12:50,399 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 17:12:50,399 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 17:12:50,399 - Client environment:java.compiler=<NA>
+2017-05-01 17:12:50,399 - Client environment:os.name=Mac OS X
+2017-05-01 17:12:50,399 - Client environment:os.arch=x86_64
+2017-05-01 17:12:50,399 - Client environment:os.version=10.12.4
+2017-05-01 17:12:50,399 - Client environment:user.name=wenbo.shen
+2017-05-01 17:12:50,399 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 17:12:50,399 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 17:12:50,400 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@13f948e
+2017-05-01 17:12:50,422 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 17:12:50,463 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 17:12:50,632 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300b6, negotiated timeout = 30000
+2017-05-01 17:12:50,638 - State change: CONNECTED
+2017-05-01 17:12:50,639 - zookeeper state changed to CONNECTED
+2017-05-01 17:12:51,643 - succeed to create zookeeper client, connected:true
+2017-05-01 17:12:51,647 - zk client success create123.206.9.140:
+2017-05-01 17:13:27,870 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 17:13:27,967 - Starting
+2017-05-01 17:13:27,977 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 17:13:27,978 - Client environment:host.name=192.168.1.101
+2017-05-01 17:13:27,978 - Client environment:java.version=1.7.0_80
+2017-05-01 17:13:27,978 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 17:13:27,978 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 17:13:27,978 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 17:13:27,978 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 17:13:27,978 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 17:13:27,978 - Client environment:java.compiler=<NA>
+2017-05-01 17:13:27,979 - Client environment:os.name=Mac OS X
+2017-05-01 17:13:27,979 - Client environment:os.arch=x86_64
+2017-05-01 17:13:27,979 - Client environment:os.version=10.12.4
+2017-05-01 17:13:27,979 - Client environment:user.name=wenbo.shen
+2017-05-01 17:13:27,979 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 17:13:27,979 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 17:13:27,980 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@13f948e
+2017-05-01 17:13:28,003 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 17:13:28,046 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 17:13:28,087 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300b7, negotiated timeout = 30000
+2017-05-01 17:13:28,095 - State change: CONNECTED
+2017-05-01 17:13:28,096 - zookeeper state changed to CONNECTED
+2017-05-01 17:13:29,098 - succeed to create zookeeper client, connected:true
+2017-05-01 17:13:29,100 - zk client success create123.206.9.140:
+2017-05-01 17:13:52,390 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 17:13:52,504 - Starting
+2017-05-01 17:13:52,516 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 17:13:52,516 - Client environment:host.name=192.168.1.101
+2017-05-01 17:13:52,516 - Client environment:java.version=1.7.0_80
+2017-05-01 17:13:52,516 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 17:13:52,516 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 17:13:52,517 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 17:13:52,517 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 17:13:52,517 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 17:13:52,517 - Client environment:java.compiler=<NA>
+2017-05-01 17:13:52,517 - Client environment:os.name=Mac OS X
+2017-05-01 17:13:52,517 - Client environment:os.arch=x86_64
+2017-05-01 17:13:52,517 - Client environment:os.version=10.12.4
+2017-05-01 17:13:52,518 - Client environment:user.name=wenbo.shen
+2017-05-01 17:13:52,518 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 17:13:52,518 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 17:13:52,519 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@3927ce5e
+2017-05-01 17:13:52,544 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 17:13:52,592 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 17:13:52,637 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300b8, negotiated timeout = 30000
+2017-05-01 17:13:52,644 - State change: CONNECTED
+2017-05-01 17:13:52,645 - zookeeper state changed to CONNECTED
+2017-05-01 17:13:53,649 - succeed to create zookeeper client, connected:true
+2017-05-01 17:13:53,652 - zk client success create123.206.9.140:

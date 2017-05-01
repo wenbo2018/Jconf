@@ -1,5 +1,6 @@
 package com.github.wenbo2018.jconf.web;
 
+import com.github.wenbo2018.jconf.web.listener.ConfigPushListener;
 import org.mybatis.spring.annotation.MapperScan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,6 +18,7 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         SpringApplication app = new SpringApplication(Application.class);
+        app.addListeners(new ConfigPushListener());
         app.run(args);
     }
 

@@ -41,7 +41,7 @@ public class Jconf {
             public void run() {
                 int i = 10000;
                 while (i > 0) {
-                    System.out.println(Jconf.getString("key"));
+                    System.out.println(Jconf.getString("key1"));
                     i--;
                     try {
                         Thread.sleep(1000);
