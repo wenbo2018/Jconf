@@ -39,5 +39,17 @@
         SELECT * FROM Config
     </select>
 
+    <select id="load" resultMap="BaseResultMap" parameterType="int">
+        SELECT *FROM  Config WHERE  Id=Id=#{id}#
+    </select>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM Config WHERE Id=#{id}#
+    </delete>
+
+    <update id="update"  >
+        UPDATE Config SET Value=#{1}# WHERE Id=#{0};
+    </update>
+
 
 </mapper>

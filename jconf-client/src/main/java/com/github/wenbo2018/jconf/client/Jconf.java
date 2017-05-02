@@ -39,9 +39,9 @@ public class Jconf {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                int i = 10000;
+                int i = Integer.MAX_VALUE;
                 while (i > 0) {
-                    System.out.println(Jconf.getString("key1"));
+                    System.out.println(Jconf.getString("https"));
                     i--;
                     try {
                         Thread.sleep(1000);

@@ -159,3 +159,412 @@
 2017-05-01 17:13:52,645 - zookeeper state changed to CONNECTED
 2017-05-01 17:13:53,649 - succeed to create zookeeper client, connected:true
 2017-05-01 17:13:53,652 - zk client success create123.206.9.140:
+2017-05-01 20:42:53,389 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 20:42:53,493 - Starting
+2017-05-01 20:42:53,504 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 20:42:53,504 - Client environment:host.name=192.168.1.101
+2017-05-01 20:42:53,504 - Client environment:java.version=1.7.0_80
+2017-05-01 20:42:53,504 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 20:42:53,504 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 20:42:53,504 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 20:42:53,504 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 20:42:53,505 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 20:42:53,505 - Client environment:java.compiler=<NA>
+2017-05-01 20:42:53,505 - Client environment:os.name=Mac OS X
+2017-05-01 20:42:53,505 - Client environment:os.arch=x86_64
+2017-05-01 20:42:53,505 - Client environment:os.version=10.12.4
+2017-05-01 20:42:53,505 - Client environment:user.name=wenbo.shen
+2017-05-01 20:42:53,505 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 20:42:53,505 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 20:42:53,506 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@13f948e
+2017-05-01 20:42:53,528 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 20:42:53,570 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 20:42:53,634 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300b9, negotiated timeout = 30000
+2017-05-01 20:42:53,640 - State change: CONNECTED
+2017-05-01 20:42:53,642 - zookeeper state changed to CONNECTED
+2017-05-01 20:42:54,644 - succeed to create zookeeper client, connected:true
+2017-05-01 20:42:54,647 - zk client success create123.206.9.140:
+2017-05-01 20:42:54,713 - value is null from zk config centerhome-activlty:
+2017-05-01 20:42:55,751 - value is null from zk config centerhome-activlty:
+2017-05-01 20:42:56,787 - value is null from zk config centerhome-activlty:
+2017-05-01 20:42:57,829 - value is null from zk config centerhome-activlty:
+2017-05-01 20:42:58,868 - value is null from zk config centerhome-activlty:
+2017-05-01 20:42:59,904 - value is null from zk config centerhome-activlty:
+2017-05-01 20:43:00,940 - value is null from zk config centerhome-activlty:
+2017-05-01 20:43:01,976 - value is null from zk config centerhome-activlty:
+2017-05-01 20:43:03,016 - value is null from zk config centerhome-activlty:
+2017-05-01 20:43:04,052 - value is null from zk config centerhome-activlty:
+2017-05-01 20:43:05,086 - value is null from zk config centerhome-activlty:
+2017-05-01 20:43:06,121 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:17,480 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 20:44:17,575 - Starting
+2017-05-01 20:44:17,586 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 20:44:17,586 - Client environment:host.name=192.168.1.101
+2017-05-01 20:44:17,586 - Client environment:java.version=1.7.0_80
+2017-05-01 20:44:17,586 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 20:44:17,586 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 20:44:17,586 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 20:44:17,586 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 20:44:17,587 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 20:44:17,587 - Client environment:java.compiler=<NA>
+2017-05-01 20:44:17,587 - Client environment:os.name=Mac OS X
+2017-05-01 20:44:17,587 - Client environment:os.arch=x86_64
+2017-05-01 20:44:17,587 - Client environment:os.version=10.12.4
+2017-05-01 20:44:17,587 - Client environment:user.name=wenbo.shen
+2017-05-01 20:44:17,587 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 20:44:17,587 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 20:44:17,588 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@4add5f6d
+2017-05-01 20:44:17,608 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 20:44:17,648 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 20:44:17,686 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300ba, negotiated timeout = 30000
+2017-05-01 20:44:17,695 - State change: CONNECTED
+2017-05-01 20:44:17,697 - zookeeper state changed to CONNECTED
+2017-05-01 20:44:18,700 - succeed to create zookeeper client, connected:true
+2017-05-01 20:44:18,703 - zk client success create123.206.9.140:
+2017-05-01 20:44:18,762 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:19,803 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:20,855 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:21,891 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:22,926 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:23,961 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:24,997 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:26,032 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:27,069 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:28,099 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:29,135 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:30,170 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:31,205 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:32,241 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:33,282 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:34,320 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:35,357 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:36,393 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:37,429 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:38,461 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:39,496 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:40,532 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:41,566 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:42,601 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:43,638 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:44,672 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:45,711 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:46,749 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:47,783 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:48,816 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:49,851 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:50,887 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:51,535 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 20:44:51,629 - Starting
+2017-05-01 20:44:51,639 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 20:44:51,639 - Client environment:host.name=192.168.1.101
+2017-05-01 20:44:51,639 - Client environment:java.version=1.7.0_80
+2017-05-01 20:44:51,639 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 20:44:51,639 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 20:44:51,639 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 20:44:51,640 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 20:44:51,640 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 20:44:51,640 - Client environment:java.compiler=<NA>
+2017-05-01 20:44:51,640 - Client environment:os.name=Mac OS X
+2017-05-01 20:44:51,640 - Client environment:os.arch=x86_64
+2017-05-01 20:44:51,640 - Client environment:os.version=10.12.4
+2017-05-01 20:44:51,640 - Client environment:user.name=wenbo.shen
+2017-05-01 20:44:51,640 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 20:44:51,640 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 20:44:51,641 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@13f948e
+2017-05-01 20:44:51,664 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 20:44:51,703 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 20:44:51,742 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300bb, negotiated timeout = 30000
+2017-05-01 20:44:51,749 - State change: CONNECTED
+2017-05-01 20:44:51,751 - zookeeper state changed to CONNECTED
+2017-05-01 20:44:51,919 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:52,756 - succeed to create zookeeper client, connected:true
+2017-05-01 20:44:52,758 - zk client success create123.206.9.140:
+2017-05-01 20:44:52,954 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:53,990 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:55,026 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:56,062 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:57,094 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:58,128 - value is null from zk config centerhome-activlty:
+2017-05-01 20:44:59,162 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:00,198 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:01,231 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:02,267 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:03,300 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:04,334 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:05,367 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:06,404 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:07,439 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:08,475 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:09,512 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:10,548 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:11,582 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:12,621 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:13,661 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:14,698 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:15,732 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:16,768 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:17,802 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:18,738 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 20:45:18,836 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:18,837 - Starting
+2017-05-01 20:45:18,847 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 20:45:18,847 - Client environment:host.name=192.168.1.101
+2017-05-01 20:45:18,847 - Client environment:java.version=1.7.0_80
+2017-05-01 20:45:18,847 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 20:45:18,848 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 20:45:18,848 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 20:45:18,848 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 20:45:18,848 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 20:45:18,848 - Client environment:java.compiler=<NA>
+2017-05-01 20:45:18,848 - Client environment:os.name=Mac OS X
+2017-05-01 20:45:18,848 - Client environment:os.arch=x86_64
+2017-05-01 20:45:18,848 - Client environment:os.version=10.12.4
+2017-05-01 20:45:18,848 - Client environment:user.name=wenbo.shen
+2017-05-01 20:45:18,848 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 20:45:18,848 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 20:45:18,849 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@40fc801f
+2017-05-01 20:45:18,870 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 20:45:18,916 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 20:45:18,963 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300bc, negotiated timeout = 30000
+2017-05-01 20:45:18,971 - State change: CONNECTED
+2017-05-01 20:45:18,972 - zookeeper state changed to CONNECTED
+2017-05-01 20:45:19,871 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:19,977 - succeed to create zookeeper client, connected:true
+2017-05-01 20:45:19,979 - zk client success create123.206.9.140:
+2017-05-01 20:45:20,904 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:21,939 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:22,974 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:24,009 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:25,041 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:26,076 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:27,113 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:28,150 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:29,183 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:30,217 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:31,252 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:32,287 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:33,321 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:34,351 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:35,384 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:36,424 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:37,459 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:38,489 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:39,525 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:40,560 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:41,594 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:42,630 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:43,664 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:44,698 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:45,735 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:46,768 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:47,804 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:48,838 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:49,873 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:50,907 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:51,943 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:52,976 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:54,013 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:55,046 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:56,085 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:57,120 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:58,157 - value is null from zk config centerhome-activlty:
+2017-05-01 20:45:59,193 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:00,226 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:01,261 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:02,311 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:03,346 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:04,381 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:05,415 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:06,451 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:07,485 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:08,520 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:09,556 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:10,594 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:11,628 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:12,662 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:13,695 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:14,727 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:15,762 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:16,797 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:17,829 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:18,866 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:19,898 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:20,935 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:21,968 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:23,002 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:24,039 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:25,074 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:26,108 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:27,145 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:28,180 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:29,213 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:30,248 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:31,286 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:32,318 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:33,354 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:34,386 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:35,422 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:36,456 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:37,495 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:38,529 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:39,574 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:40,608 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:41,641 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:42,675 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:43,705 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:44,740 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:45,772 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:46,806 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:47,843 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:48,882 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:49,923 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:50,959 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:51,994 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:53,028 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:54,062 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:55,097 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:56,132 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:57,165 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:58,200 - value is null from zk config centerhome-activlty:
+2017-05-01 20:46:59,236 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:00,268 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:01,304 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:02,341 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:03,375 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:04,410 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:05,445 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:06,480 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:07,514 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:08,549 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:09,584 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:10,622 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:11,654 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:12,685 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:13,722 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:14,757 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:15,792 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:16,826 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:17,873 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:18,909 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:19,942 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:20,973 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:22,007 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:23,038 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:24,074 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:25,113 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:26,148 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:27,183 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:28,250 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:29,285 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:30,319 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:31,352 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:32,386 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:33,418 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:34,452 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:35,486 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:36,520 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:37,555 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:38,590 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:39,628 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:40,661 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:41,697 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:42,729 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:43,761 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:44,795 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:45,832 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:46,866 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:47,899 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:48,935 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:49,969 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:51,003 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:52,038 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:53,077 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:54,113 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:55,146 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:56,184 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:57,218 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:58,253 - value is null from zk config centerhome-activlty:
+2017-05-01 20:47:59,286 - value is null from zk config centerhome-activlty:
+2017-05-01 20:48:00,321 - value is null from zk config centerhome-activlty:
+2017-05-01 20:48:01,355 - value is null from zk config centerhome-activlty:
+2017-05-01 20:48:02,346 - zookeeper event received, type: NodeCreated, path: /JCONF/CONFIG/home-activlty
+2017-05-01 20:48:02,423 - config changeConfigChangeEvent{key='home-activlty', value='1234566'};
+2017-05-01 20:48:02,423 - config change successConfigChangeEvent{key='home-activlty', value='1234566'};
+2017-05-01 20:49:06,042 - maxRetries too large (2147483647). Pinning to 29
+2017-05-01 20:49:06,141 - Starting
+2017-05-01 20:49:06,152 - Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+2017-05-01 20:49:06,152 - Client environment:host.name=192.168.1.101
+2017-05-01 20:49:06,152 - Client environment:java.version=1.7.0_80
+2017-05-01 20:49:06,153 - Client environment:java.vendor=Oracle Corporation
+2017-05-01 20:49:06,153 - Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre
+2017-05-01 20:49:06,153 - Client environment:java.class.path=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/htmlconverter.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-doclet.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/lib/tools.jar:/Users/wenbo.shen/project/home/Jconf/jconf-client/target/classes:/Users/wenbo.shen/project/home/Jconf/jconf-common/target/classes:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-framework/2.7.1/curator-framework-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/zookeeper/zookeeper/3.4.6/zookeeper-3.4.6.jar:/Users/wenbo.shen/.m2/repository/jline/jline/0.9.94/jline-0.9.94.jar:/Users/wenbo.shen/.m2/repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar:/Users/wenbo.shen/.m2/repository/com/google/guava/guava/16.0.1/guava-16.0.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-client/2.7.1/curator-client-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/apache/curator/curator-recipes/2.7.1/curator-recipes-2.7.1.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-log4j12/1.7.10/slf4j-log4j12-1.7.10.jar:/Users/wenbo.shen/.m2/repository/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar:/Users/wenbo.shen/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/wenbo.shen/.m2/repository/org/apache/commons/commons-lang3/3.2/commons-lang3-3.2.jar:/Applications/IntelliJ IDEA.app/Contents/lib/idea_rt.jar
+2017-05-01 20:49:06,153 - Client environment:java.library.path=/Users/wenbo.shen/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2017-05-01 20:49:06,153 - Client environment:java.io.tmpdir=/var/folders/8d/qpv5thcn36lc5y753n7qq8wh0000gn/T/
+2017-05-01 20:49:06,153 - Client environment:java.compiler=<NA>
+2017-05-01 20:49:06,153 - Client environment:os.name=Mac OS X
+2017-05-01 20:49:06,153 - Client environment:os.arch=x86_64
+2017-05-01 20:49:06,153 - Client environment:os.version=10.12.4
+2017-05-01 20:49:06,153 - Client environment:user.name=wenbo.shen
+2017-05-01 20:49:06,153 - Client environment:user.home=/Users/wenbo.shen
+2017-05-01 20:49:06,153 - Client environment:user.dir=/Users/wenbo.shen/project/home/Jconf
+2017-05-01 20:49:06,154 - Initiating client connection, connectString=123.206.9.140 sessionTimeout=30000 watcher=org.apache.curator.ConnectionState@4add5f6d
+2017-05-01 20:49:06,177 - Opening socket connection to server 123.206.9.140/123.206.9.140:2181. Will not attempt to authenticate using SASL (unknown error)
+2017-05-01 20:49:06,220 - Socket connection established to 123.206.9.140/123.206.9.140:2181, initiating session
+2017-05-01 20:49:06,260 - Session establishment complete on server 123.206.9.140/123.206.9.140:2181, sessionid = 0x15af9f3995300be, negotiated timeout = 30000
+2017-05-01 20:49:06,267 - State change: CONNECTED
+2017-05-01 20:49:06,268 - zookeeper state changed to CONNECTED
+2017-05-01 20:49:07,269 - succeed to create zookeeper client, connected:true
+2017-05-01 20:49:07,272 - zk client success create123.206.9.140:
+2017-05-01 20:49:07,339 - value is null from zk config centerhttps:
+2017-05-01 20:49:08,376 - value is null from zk config centerhttps:
+2017-05-01 20:49:09,411 - value is null from zk config centerhttps:
+2017-05-01 20:49:10,445 - value is null from zk config centerhttps:
+2017-05-01 20:49:11,479 - value is null from zk config centerhttps:
+2017-05-01 20:49:12,521 - value is null from zk config centerhttps:
+2017-05-01 20:49:13,552 - value is null from zk config centerhttps:
+2017-05-01 20:49:14,586 - value is null from zk config centerhttps:
+2017-05-01 20:49:15,620 - value is null from zk config centerhttps:
+2017-05-01 20:49:16,654 - value is null from zk config centerhttps:
+2017-05-01 20:49:17,689 - value is null from zk config centerhttps:
+2017-05-01 20:49:18,725 - value is null from zk config centerhttps:
+2017-05-01 20:49:19,759 - value is null from zk config centerhttps:
+2017-05-01 20:49:20,795 - value is null from zk config centerhttps:
+2017-05-01 20:49:21,830 - value is null from zk config centerhttps:
+2017-05-01 20:49:22,866 - value is null from zk config centerhttps:
+2017-05-01 20:49:23,902 - value is null from zk config centerhttps:
+2017-05-01 20:49:24,937 - value is null from zk config centerhttps:
+2017-05-01 20:49:25,972 - value is null from zk config centerhttps:
+2017-05-01 20:49:27,003 - value is null from zk config centerhttps:
+2017-05-01 20:49:28,036 - value is null from zk config centerhttps:
+2017-05-01 20:49:29,070 - value is null from zk config centerhttps:
+2017-05-01 20:49:30,107 - value is null from zk config centerhttps:
+2017-05-01 20:49:31,142 - value is null from zk config centerhttps:
+2017-05-01 20:49:32,178 - value is null from zk config centerhttps:
+2017-05-01 20:49:33,213 - value is null from zk config centerhttps:
+2017-05-01 20:49:34,251 - value is null from zk config centerhttps:
+2017-05-01 20:49:35,285 - value is null from zk config centerhttps:
+2017-05-01 20:49:36,320 - value is null from zk config centerhttps:
+2017-05-01 20:49:37,355 - value is null from zk config centerhttps:
+2017-05-01 20:49:38,391 - value is null from zk config centerhttps:
+2017-05-01 20:49:39,453 - value is null from zk config centerhttps:
+2017-05-01 20:49:40,489 - value is null from zk config centerhttps:
+2017-05-01 20:49:41,525 - value is null from zk config centerhttps:
+2017-05-01 20:49:42,560 - value is null from zk config centerhttps:
+2017-05-01 20:49:43,589 - value is null from zk config centerhttps:
+2017-05-01 20:49:44,626 - value is null from zk config centerhttps:
+2017-05-01 20:49:45,669 - value is null from zk config centerhttps:
+2017-05-01 20:49:46,703 - value is null from zk config centerhttps:
+2017-05-01 20:49:47,746 - value is null from zk config centerhttps:
+2017-05-01 20:49:48,780 - value is null from zk config centerhttps:
+2017-05-01 20:49:49,819 - value is null from zk config centerhttps:
+2017-05-01 20:49:50,855 - value is null from zk config centerhttps:
+2017-05-01 20:49:51,890 - value is null from zk config centerhttps:
+2017-05-01 20:49:52,926 - value is null from zk config centerhttps:
+2017-05-01 20:49:53,958 - value is null from zk config centerhttps:
+2017-05-01 20:49:54,991 - value is null from zk config centerhttps:
+2017-05-01 20:49:56,026 - value is null from zk config centerhttps:
+2017-05-01 20:49:57,061 - value is null from zk config centerhttps:
+2017-05-01 20:49:58,099 - value is null from zk config centerhttps:
+2017-05-01 20:49:58,833 - zookeeper event received, type: NodeCreated, path: /JCONF/CONFIG/https
+2017-05-01 20:49:58,904 - config changeConfigChangeEvent{key='https', value=' data:{Name:"sanmao",Password:"sanmaoword"}'};
+2017-05-01 20:49:58,904 - config change successConfigChangeEvent{key='https', value=' data:{Name:"sanmao",Password:"sanmaoword"}'};

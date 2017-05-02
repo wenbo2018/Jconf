@@ -9,5 +9,7 @@ import com.github.wenbo2018.jconf.web.dto.Config;
 
 public interface ConfigService {
     void add(Config config);
+    void delete(int id);
     PageInfo<Config> queryByPage(Integer pageIndex, Integer pageSize);
+    void update(int id,String value);
 }

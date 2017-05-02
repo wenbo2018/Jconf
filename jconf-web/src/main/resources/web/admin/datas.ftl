@@ -15,7 +15,7 @@
     <script src="/theme/jquery-2.1.4.min.js"></script>
     <script src="/theme/jquery.pagination-1.2.7.min.js"></script>
     <script src="/js/pages.js"></script>
-
+    <script src="/js/jconf.js"></script>
 <#--css-->
     <link rel="stylesheet" type="text/css" href="/bs/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/bs/css/bootstrap-theme.css">
@@ -45,10 +45,10 @@
     }
 
     /*.modal-dialog {*/
-        /*position: absolute;*/
-        /*left: 50%;*/
-        /*top: 50%;*/
-        /*transform:translateX(-50%) translateY(-50%);*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*transform:translateX(-50%) translateY(-50%);*/
     /*}*/
 
 </style>
@@ -65,17 +65,22 @@
 
 <#include "/admin/menu.ftl"/>
 
+
+
+
+
 <div class="content">
 
     <div class="main-content">
 
 
-    <#--<ul class="nav nav-tabs">-->
-    <#--<li class="active"><a href="#home" data-toggle="tab">IMU数据</a></li>-->
-    <#--<li><a href="#profile"   data-toggle="tab">WIFI数据</a></li>-->
-    <#--<li><a href="#recoder"   data-toggle="tab">数据采集记录</a></li>-->
-    <#--<li><a href="#ap"   data-toggle="tab">AP数据</a></li>-->
-    <#--</ul>-->
+        <div class="btn-toolbar list-toolbar">
+            <button type='button' data-toggle='modal' data-target='#mymodal2' class='btn  btn-info'>新增配置</button>
+        </div>
+        <div class="col-sm-5">
+            <input class="form-control" id="ds_host" type="text" placeholder="msn"/>
+        </div>
+
 
         <div class="row">
             <div class="col-md-12">
@@ -110,88 +115,7 @@
                         </div>
                     </div>
 
-                <#--&lt;#&ndash;第二版&ndash;&gt;-->
-                <#--<div class="tab-pane fade" id="profile">-->
-                <#--<div class="panel panel-default">-->
-                <#--<div class="panel-heading no-collapse">WIFI数据<span class="label label-warning">+10</span></div>-->
-                <#--<table class="table table-bordered table-striped">-->
-                <#--<thead>-->
-                <#--<tr>-->
-                <#--<th class="center">Id</th>-->
-                <#--<th class="center">AP1</th>-->
-                <#--<th class="center">AP2</th>-->
-                <#--<th class="center">AP3</th>-->
-                <#--<th class="center">AP4</th>-->
-                <#--<th class="center">AP5</th>-->
-                <#--<th class="center">AP6</th>-->
-                <#--<th class="center">AP7</th>-->
-                <#--<th class="center">AP8</th>-->
-                <#--<th class="center">AP9</th>-->
-                <#--<th class="center">AP10</th>-->
-                <#--<th class="center">Position</th>-->
-                <#--<th class="center">操作</th>-->
-                <#--</tr>-->
-                <#--</thead>-->
-                <#--<tbody id="contentw">-->
 
-                <#--</tbody>-->
-                <#--</table>-->
-                <#--</div>-->
-                <#--<div id="pagew">-->
-                <#--<!-- pagination所需容器 &ndash;&gt;-->
-                <#--<div class="w-pagination"></div>-->
-                <#--</div>-->
-                <#--</div>-->
-
-                <#--&lt;#&ndash;第三版&ndash;&gt;-->
-                <#--<div class="tab-pane fade" id="recoder">-->
-                <#--<div class="panel panel-default">-->
-                <#--<div class="panel-heading no-collapse">数据采集记录<span class="label label-warning">+10</span></div>-->
-                <#--<table class="table table-bordered table-striped">-->
-                <#--<thead>-->
-                <#--<tr>-->
-                <#--<th class="center">Id</th>-->
-                <#--<th class="center">Position</th>-->
-                <#--<th class="center">手机型号</th>-->
-                <#--<th class="center">数据量</th>-->
-                <#--<th class="center">类型</th>-->
-                <#--<th class="center">采集时间</th>-->
-                <#--<th class="center">操作</th>-->
-                <#--</tr>-->
-                <#--</thead>-->
-                <#--<tbody id="contentr">-->
-
-                <#--</tbody>-->
-                <#--</table>-->
-                <#--</div>-->
-                <#--<div id="pager">-->
-                <#--<!-- pagination所需容器 &ndash;&gt;-->
-                <#--<div class="r-pagination"></div>-->
-                <#--</div>-->
-                <#--</div>-->
-
-                <#--&lt;#&ndash;第四版&ndash;&gt;-->
-                <#--<div class="tab-pane fade" id="ap">-->
-                <#--<div class="panel panel-default">-->
-                <#--<div class="panel-heading no-collapse">AP数据<span class="label label-warning">+10</span></div>-->
-                <#--<table class="table table-bordered table-striped">-->
-                <#--<thead>-->
-                <#--<tr>-->
-                <#--<th class="center">Id</th>-->
-                <#--<th class="center">MAC地址</th>-->
-                <#--<th class="center">操作</th>-->
-                <#--</tr>-->
-                <#--</thead>-->
-                <#--<tbody id="contenta">-->
-
-                <#--</tbody>-->
-                <#--</table>-->
-                <#--</div>-->
-                <#--<div id="pagea">-->
-                <#--<!-- pagination所需容器 &ndash;&gt;-->
-                <#--<div class="a-pagination"></div>-->
-                <#--</div>-->
-                <#--</div>-->
 
                 </div>
             </div>
@@ -213,58 +137,118 @@
 </script>
 
 <!-- 触发模态弹出窗的元素 -->
-
 <!-- 模态弹出窗 -->
-<div class="modal fade" id="mymodal">
-    <div class="modal-dialog" style="width:800px;">
+<div class="modal fade" id="mymodal2">
+    <div class="modal-dialog " style="width:1000px;">
         <div class="modal-content">
-            <div style="width: 100%;padding: 40px;">
+            <div style="width: 100%;padding: 10px;">
                 <div class="container-fluid">
                     <div class="row-fluid">
                         <form class="form-horizontal" role="form">
                             <fieldset>
-                                <legend class="text-center ">配置数据源</legend>
+                                <legend class="text-center ">新增配置</legend>
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="ds_host">Key:</label>
-                                    <div class="col-sm-4">
-                                        <input class="form-control" id="ds_host" type="text" placeholder="192.168.1.161"/>
+                                    <label class="col-sm-1 control-label" >Key:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control"  name="cofing_key" id="cofing_key" type="text"
+                                               placeholder="192.168.1.161"/>
                                     </div>
-                                    <label class="col-sm-2 control-label" for="ds_name">Value:</label>
-                                    <div class="col-sm-4">
-                                        <input class="form-control" id="ds_name" type="text" placeholder="msh"/>
+                                    <label class="col-sm-1 control-label" >Value:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" name="cofing_value" id="cofing_value" type="text" placeholder="msh"/>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="ds_username">项目ID:</label>
-                                    <div class="col-sm-4">
-                                        <input class="form-control" id="ds_username" type="text" placeholder="root"/>
+                                    <label class="col-sm-1 control-label" for="ds_username">项目ID:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" name="cofing_projectId" id="cofing_projectId" type="text" placeholder="root"/>
                                     </div>
-                                    <label class="col-sm-2 control-label" for="ds_password">负责人:</label>
-                                    <div class="col-sm-4">
-                                        <input class="form-control" id="ds_password" type="password" placeholder="123456"/>
+                                    <label class="col-sm-1 control-label" for="ds_password">负责人:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" name="cofing_userName" id="cofing_userName"
+                                               placeholder="123456"/>
                                     </div>
                                 </div>
+
                                 <div class="form-group">
-                                    <label class="col-sm-2 control-label" for="ds_username">邮箱:</label>
-                                    <div class="col-sm-4">
-                                        <input class="form-control" id="ds_username" type="text" placeholder="root"/>
+                                    <label class="col-sm-1 control-label" for="ds_username">邮箱:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" name="cofing_userMail" id="cofing_userMail" type="text" placeholder="root"/>
                                     </div>
-                                    <label class="col-sm-2 control-label" for="ds_password">环境选择</label>
-                                    <div class="col-sm-4">
-                                        <select id="disabledSelect" class="form-control">
-                                            <option>Beat环境</option>
-                                            <option>QA环境</option>
-                                            <option>Production环境</option>
+                                    <label class="col-sm-1 control-label" for="ds_password">环境</label>
+                                    <div class="col-sm-5">
+                                        <select id="config_env" name="confg_env" class="form-control">
+                                            <option value="1">Beat环境</option>
+                                            <option value="2">QA环境</option>
+                                            <option value="3">Production环境</option>
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group text-center">
-                                    <button class="btn btn-success btn-large" type="button">保存</button>
-                                </div>
                             </fieldset>
+                            <div class="form-group text-center">
+                                <button class="btn btn-success btn-large" type="button" id="config_add">保存</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
+<!-- 模态弹出窗 -->
+<div class="modal fade" id="mymodal">
+    <div class="modal-dialog " style="width:800px;">
+        <div class="modal-content">
+            <div style="width: 100%;padding: 30px;">
+                <div class="container-fluid">
+                    <div class="row-fluid">
+                        <form class="form-horizontal" id="2" role="form">
+                            <fieldset>
+                                <legend class="text-center ">修改配置</legend>
+                                <div class="form-group">
+                                    <label class="col-sm-1 control-label" for="ds_host">Key:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" id="config_id" type="hidden" value="" placeholder="msn"/>
+                                        <input class="form-control" id="config_update_key" type="text" value=""/>
+                                    </div>
+                                    <label class="col-sm-1 control-label" for="ds_name">Value:</label>
+                                    <div class="col-sm-5">
+                                        <input class="form-control" id="config_update_value" type="text" placeholder="msh"/>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-success btn-large" type="button" type="config_update">保存</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<#--信息提示框-->
+<div class="modal fade " id="myAlert" style="z-index:2000; ">
+    <div class="modal-backdrop in" style="z-index:1900"></div>
+    <div class="modal-dialog" style="z-index:1901; margin-top:10%; ">
+        <div class="modal-content">
+            <div class="modal-header" >
+                警告！
+                <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body text-center" id="myAlertContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>

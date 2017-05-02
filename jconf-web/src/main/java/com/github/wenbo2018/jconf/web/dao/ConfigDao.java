@@ -11,4 +11,10 @@ public interface ConfigDao {
     void add(Config config);
 
     List<Config> list();
+
+    void delete(int id);
+
+    Config load(int id);
+
+    void update(int id,String value);
 }

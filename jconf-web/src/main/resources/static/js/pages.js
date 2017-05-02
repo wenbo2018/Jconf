@@ -15,7 +15,7 @@
             showPageSizes : true,
             infoFormat : '{start} ~ {end}条，共{total}条',
             remote : {
-                url : '/config/configPagses', // 请求地址
+                url : '/jconf/admin/config/configPagses', // 请求地址
                 params : {
                     // 'param' : param
                     // 自定义请求参数
@@ -32,8 +32,8 @@
                         c+="<td>"+data.list[i].env+"</td><td>"+data.list[i].projectId+"</td><td>"+data.list[i].userName+"</td>";
                         c+="<td>"+data.list[i].userEmail+"</td>";
                         c+="<td>"+data.list[i].dateTime+"</td>";
-                        c+="<td ><button type='button' data-toggle='modal' data-target='#mymodal' class='btn  btn-info'>修改</button>";
-                        c+="&nbsp;<a  id='users-delete-user'  name='"+data.list[i].id+"'  data-toggle='modal' class='btn btn-danger'>删除</a></td></tr>";
+                        c+="<td ><button type='button' id='config_update' name='"+data.list[i].id+","+data.list[i].key+"'  data-toggle='modal' data-target='#mymodal' class='btn  btn-info'>修改</button>";
+                        c+="&nbsp;<a  id='config_delete'  name='"+data.list[i].id+"'  data-toggle='modal' class='btn btn-danger'>删除</a></td></tr>";
                     }
                     $("#content").html(c);
                 },
