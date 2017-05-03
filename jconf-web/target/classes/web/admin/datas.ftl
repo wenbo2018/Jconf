@@ -77,11 +77,6 @@
         <div class="btn-toolbar list-toolbar">
             <button type='button' data-toggle='modal' data-target='#mymodal2' class='btn  btn-info'>新增配置</button>
         </div>
-        <div class="col-sm-5">
-            <input class="form-control" id="ds_host" type="text" placeholder="msn"/>
-        </div>
-
-
         <div class="row">
             <div class="col-md-12">
                 <br>
@@ -179,9 +174,8 @@
                                     <label class="col-sm-1 control-label" for="ds_password">环境</label>
                                     <div class="col-sm-5">
                                         <select id="config_env" name="confg_env" class="form-control">
-                                            <option value="1">Beat环境</option>
-                                            <option value="2">QA环境</option>
-                                            <option value="3">Production环境</option>
+                                            <option value="1">测试环境</option>
+                                            <option value="2">线上环境</option>
                                         </select>
                                     </div>
                                 </div>

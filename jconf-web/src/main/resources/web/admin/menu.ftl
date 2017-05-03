@@ -49,9 +49,8 @@
         </li>
         <li>
             <ul class="dashboard-menu nav nav-list collapse in">
-                <li><a href="index"><span class="fa fa-caret-right"></span>Beat环境</a></li>
-                <li><a href="users"><span class="fa fa-caret-right"></span>QA环境</a></li>
-                <li><a href="datas"><span class="fa fa-caret-right"></span>Production环境</a></li>
+                <li><a href="index"><span class="fa fa-caret-right"></span>测试环境</a></li>
+                <li><a href="datas"><span class="fa fa-caret-right"></span>线上环境</a></li>
             </ul>
         </li>
 
