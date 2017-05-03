@@ -7,7 +7,7 @@ $(function () {
         configDelete();
     });
     $("#content").on("click","#config_update",function(){
-        configEdit();
+        configUpdate();
     });
 });
 function configEdit() {
@@ -107,7 +107,7 @@ function configDelete() {
 }
 
 
-function configDelete() {
+function configUpdate() {
 
 
     var id = $("#config_delete").attr("name");
