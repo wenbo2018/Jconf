@@ -1,6 +1,5 @@
 package com.github.wenbo2018.jconf.client;
 
-import org.apache.zookeeper.data.Stat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +51,4 @@ public class Jconf {
             }
         }).start();
     }
-
-
-
 }
