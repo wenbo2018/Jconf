@@ -3,6 +3,8 @@ package com.github.wenbo2018.jconf.web.dto;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
+
 /**
  * Created by shenwenbo on 2017/4/16.
  */

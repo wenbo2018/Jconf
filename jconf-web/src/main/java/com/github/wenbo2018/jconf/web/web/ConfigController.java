@@ -2,7 +2,7 @@ package com.github.wenbo2018.jconf.web.web;
 
 import com.github.pagehelper.PageInfo;
 import com.github.wenbo2018.jconf.web.bean.CommonResultJson;
-import com.github.wenbo2018.jconf.web.constants.ReturnCode;
+import com.github.wenbo2018.jconf.web.constants.ResultCode;
 import com.github.wenbo2018.jconf.web.dto.Config;
 import com.github.wenbo2018.jconf.web.dto.PageModel;
 import com.github.wenbo2018.jconf.web.service.ConfigService;
@@ -13,8 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import javax.annotation.Resource;
 
 /**
  * Created by shenwenbo on 2017/4/17.
@@ -47,14 +45,14 @@ public class ConfigController {
     @RequestMapping(value = "/add")
     public CommonResultJson configUpdate(String key, String value, @Param("false") Integer env, @Param("false") Integer projectId, String userName, String email) {
         CommonResultJson result = new CommonResultJson();
-        result.setCode(ReturnCode.SUCCESS);
+        result.setCode(ResultCode.SUCCESS);
         if (StringUtils.isEmpty(key)||StringUtils.isEmpty(value)||StringUtils.isEmpty(userName)||StringUtils.isEmpty(email)) {
-            result.setCode(ReturnCode.PARAMETER_ERROR);
+            result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("请输入完整的参数");
             return result;
         }
         if (projectId<=0||env<=0) {
-            result.setCode(ReturnCode.PARAMETER_ERROR);
+            result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("请输入完整的参数");
             return result;
         }
@@ -74,9 +72,9 @@ public class ConfigController {
     @RequestMapping(value = "/delete")
     public CommonResultJson configDelete(Integer id) {
         CommonResultJson result = new CommonResultJson();
-        result.setCode(ReturnCode.SUCCESS);
+        result.setCode(ResultCode.SUCCESS);
         if (id<0) {
-            result.setCode(ReturnCode.PARAMETER_ERROR);
+            result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("参数不合法！");
             return result;
         }
@@ -88,17 +86,14 @@ public class ConfigController {
     @RequestMapping(value = "/update")
     public CommonResultJson configUpdate(int id ,String value) {
         CommonResultJson result = new CommonResultJson();
-        result.setCode(ReturnCode.SUCCESS);
+        result.setCode(ResultCode.SUCCESS);
         if (id<=0||value==null) {
-            result.setCode(ReturnCode.PARAMETER_ERROR);
+            result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("参数不合法！");
             return result;
         }
         configService.update(id,value);
         return result;
     }
-
-
-
 
 }
