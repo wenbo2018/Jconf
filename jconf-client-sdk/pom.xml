@@ -6,8 +6,8 @@
         <artifactId>Jconf-parent</artifactId>
         <version>1.0.0</version>
     </parent>
-    <artifactId>jconf-client</artifactId>
-    <name>jconf-client</name>
+    <artifactId>jconf-client-sdk</artifactId>
+    <name>jconf-client-sdk</name>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
