@@ -13,7 +13,7 @@
     <modules>
         <module>jconf-core</module>
         <module>jconf-web</module>
-        <module>jconf-client</module>
+        <module>jconf-client-sdk</module>
         <module>jconf-common</module>
     </modules>
     <dependencies>
