@@ -1,5 +1,6 @@
 package com.github.wenbo2018.jconf.client;
 
+import com.github.wenbo2018.jconf.client.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +33,16 @@ public class Jconf {
     public static String getString(String key) {
         String value = Jconf.getInstance().jconfCache.getValue(key);
         return value;
+    }
+
+    public static double getDouble(String key) {
+        String value = Jconf.getInstance().jconfCache.getValue(key);
+        return StringUtils.parseDouble(value);
+    }
+
+    public static int  getInt(String key) {
+        String value = Jconf.getInstance().jconfCache.getValue(key);
+        return StringUtils.parseInt(value);
     }
 
     public static void main(String[] args) {

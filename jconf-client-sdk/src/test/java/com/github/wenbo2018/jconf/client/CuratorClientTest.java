@@ -1,7 +1,7 @@
 package com.github.wenbo2018.jconf.client;
 
-import com.github.wenbo2018.jconf.client.client.CuratorClient;
-import com.github.wenbo2018.jconf.client.client.CuratorManager;
+import com.github.wenbo2018.jconf.client.curator.CuratorClient;
+import com.github.wenbo2018.jconf.client.curator.CuratorManager;
 
 /**
  * Created by shenwenbo on 2017/4/16.

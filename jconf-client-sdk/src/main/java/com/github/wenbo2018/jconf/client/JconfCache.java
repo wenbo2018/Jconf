@@ -3,7 +3,7 @@ package com.github.wenbo2018.jconf.client;
 import com.github.wenbo2018.jconf.client.exception.JconfException;
 import com.github.wenbo2018.jconf.common.extension.ExtensionLoader;
 import com.github.wenbo2018.jconf.client.listener.ConfigChangeEvent;
-import com.github.wenbo2018.jconf.client.listener.JconfEventListener;
+import com.github.wenbo2018.jconf.client.listener.JconfigEventListener;
 import com.github.wenbo2018.jconf.client.listener.api.ConfigInfoChangeListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -38,7 +38,7 @@ public class JconfCache {
 
     private void init() {
         this.jconfConfig = ExtensionLoader.getExtension(JconfConfig.class);
-        JconfEventListener.addListener(configInfoChangeListener);
+        JconfigEventListener.addListener(configInfoChangeListener);
     }
 
     String getValue(String key) {

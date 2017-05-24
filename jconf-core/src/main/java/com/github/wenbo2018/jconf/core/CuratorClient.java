@@ -60,7 +60,7 @@ public class CuratorClient {
         CuratorFramework oldClient = this.zookeeperClient;
         this.zookeeperClient = client;
         close(oldClient);
-        logger.info("succeed to create zookeeper client, connected:" + isConnected);
+        logger.info("succeed to create zookeeper curator, connected:" + isConnected);
         return isConnected;
     }
 
@@ -149,10 +149,10 @@ public class CuratorClient {
 
     private void close(CuratorFramework client) {
         if (client != null) {
-            logger.info("begin to close zookeeper client");
+            logger.info("begin to close zookeeper curator");
             try {
                 client.close();
-                logger.info("succeed to close zookeeper client");
+                logger.info("succeed to close zookeeper curator");
             } catch (Exception e) {
             }
         }

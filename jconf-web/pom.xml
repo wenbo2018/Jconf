@@ -4,18 +4,19 @@
     <parent>
         <groupId>com.github.wenbo2018</groupId>
         <artifactId>Jconf-parent</artifactId>
-        <version>1.0.0</version>
+        <version>${version.project}</version>
     </parent>
 
     <artifactId>jconf-web</artifactId>
     <name>jconf-web</name>
-    <version>1.0.0</version>
+    <version>${version.project}</version>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
         <encoding>UTF-8</encoding>
+        <version.jackson-mapper-asl>1.9.13</version.jackson-mapper-asl>
     </properties>
     <dependencies>
         <dependency>
@@ -87,7 +88,7 @@
         <dependency>
             <groupId>com.github.wenbo2018</groupId>
             <artifactId>jconf-core</artifactId>
-            <version>1.0.0</version>
+            <version>${version.project}</version>
         </dependency>
         <dependency>
             <groupId>com.github.pagehelper</groupId>
@@ -101,7 +102,7 @@
         <dependency>
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
+            <version>${version.jackson-mapper-asl}</version>
         </dependency>
     </dependencies>
     <build>

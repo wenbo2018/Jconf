@@ -19,15 +19,15 @@ public class CuratorRegistry implements Registry {
                 if (!isInitialized) {
                     try {
                         if (adress != null) {
-                            logger.info("start to initialize zookeeper client:",adress);
+                            logger.info("start to initialize zookeeper curator:",adress);
                             curatorClient = new CuratorClient(adress);
-                            logger.info("succeed to initialize zookeeper client:",adress);
+                            logger.info("succeed to initialize zookeeper curator:",adress);
                             isInitialized = true;
                         } else {
                             logger.error("zookeeper server adress is null");
                         }
                     } catch (Exception ex) {
-                        logger.error("failed to initialize zookeeper client", ex);
+                        logger.error("failed to initialize zookeeper curator", ex);
                     }
                 }
             }

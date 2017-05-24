@@ -33,7 +33,7 @@ public class ConfigPushListener implements ApplicationListener<ContextRefreshedE
                 String value = RegistryManager.getService(config.getKey());
                 if (value == null) {
                     RegistryManager.registerService(config.getKey(), config.getValue());
-                    logger.info("push config to jconf", config.toString());
+                    logger.info("push config to jconf:{}", config.toString());
                 }
             }
         }
