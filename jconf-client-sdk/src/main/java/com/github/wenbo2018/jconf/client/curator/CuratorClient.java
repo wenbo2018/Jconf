@@ -1,4 +1,4 @@
-package com.github.wenbo2018.jconf.client.client;
+package com.github.wenbo2018.jconf.client.curator;
 
 import com.github.wenbo2018.jconf.common.pool.DefaultThreadFactory;
 import org.apache.curator.framework.CuratorFramework;
@@ -36,9 +36,6 @@ public class CuratorClient {
         newZkClient();
     }
 
-    /**
-     * 初始化zk客户端
-     */
     public boolean newZkClient() throws InterruptedException {
         CuratorFramework client = CuratorFrameworkFactory.builder()
                 .ensembleProvider(new DefaultEnsembleProvider(address))
@@ -46,13 +43,14 @@ public class CuratorClient {
                 .connectionTimeoutMs(15 * 1000)
                 .retryPolicy(new ExponentialBackoffRetry(1000, Integer.MAX_VALUE))
                 .build();
-
         client.getConnectionStateListenable().addListener(new ConnectionStateListener() {
             @Override
             public void stateChanged(CuratorFramework client, ConnectionState newState) {
-                logger.info("zookeeper state changed to " + newState);
+                if (newState==ConnectionState.RECONNECTED) {
+                    logger.info("zookeeper state changed to:{}",newState);
+                }
                 if (newState == ConnectionState.RECONNECTED) {
-//                    RegistryEventListener.connectionReconnected();
+                    logger.info("zookeeper state changed to:{}",newState);
                 }
             }
         });
@@ -63,7 +61,7 @@ public class CuratorClient {
         CuratorFramework oldClient = this.zookeeperClient;
         this.zookeeperClient = client;
         close(oldClient);
-        logger.info("succeed to create zookeeper client, connected:" + isConnected);
+        logger.info("succeed to create zookeeper curator, connected:" + isConnected);
         return isConnected;
     }
 
@@ -89,20 +87,6 @@ public class CuratorClient {
     public String get(String path) throws Exception {
         return get(path, true);
     }
-
-
-    public String get(String path, Stat stat) throws Exception {
-        if (exists(path, false)) {
-            byte[] bytes = zookeeperClient.getData().storingStatIn(stat).forPath(path);
-            String value = new String(bytes, CHARSET);
-            logger.debug("get value of node " + path + ", value " + value);
-            return value;
-        } else {
-            logger.debug("node " + path + " does not exist");
-            return null;
-        }
-    }
-
 
     public String get(String path, boolean watch) throws Exception {
         if (exists(path, watch)) {
@@ -166,10 +150,10 @@ public class CuratorClient {
 
     private void close(CuratorFramework client) {
         if (client != null) {
-            logger.info("begin to close zookeeper client");
+            logger.info("begin to close zookeeper curator");
             try {
                 client.close();
-                logger.info("succeed to close zookeeper client");
+                logger.info("succeed to close zookeeper curator");
             } catch (Exception e) {
             }
         }

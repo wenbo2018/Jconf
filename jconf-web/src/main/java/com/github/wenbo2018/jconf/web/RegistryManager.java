@@ -41,7 +41,7 @@ public class RegistryManager {
         String addressSplits = configManager.getStringValue(ZOOKEEPER_REGISTER_ADDRESS);
         String[] addressArray = addressSplits.trim().split(",");
         if (addressArray.length <= 0) {
-            logger.error("zk client address is not found");
+            logger.error("zk curator address is not found");
         } else {
             for (int i = 0; i < addressArray.length; i++) {
                 String address = addressArray[i];
@@ -54,7 +54,7 @@ public class RegistryManager {
 
     public static void registerService(String key, String value) {
         if (registryList.size() < 1) {
-            logger.error("not found zk client");
+            logger.error("not found zk curator");
             return;
         }
         int total = registryList.size();
@@ -64,7 +64,7 @@ public class RegistryManager {
 
     public static String getService(String key) {
         if (registryList.size() < 1) {
-            logger.error("not found zk client");
+            logger.error("not found zk curator");
             return null;
         }
         int total = registryList.size();
@@ -74,7 +74,7 @@ public class RegistryManager {
 
     public static void unregisterService(String key) {
         if (registryList.size() < 1) {
-            logger.error("not found zk client");
+            logger.error("not found zk curator");
             return;
         }
         int total = registryList.size();

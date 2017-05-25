@@ -1,14 +1,17 @@
-package com.github.wenbo2018.jconf.client.client;
+package com.github.wenbo2018.jconf.client.curator;
 
 
+import com.github.wenbo2018.jconf.client.bean.ConfigInfo;
+import com.github.wenbo2018.jconf.client.constants.Constants;
 import com.github.wenbo2018.jconf.client.listener.ConfigChangeEvent;
-import com.github.wenbo2018.jconf.client.listener.ConfigChangeListener;
+import com.github.wenbo2018.jconf.client.listener.api.ConfigChangeListener;
 import com.github.wenbo2018.jconf.client.listener.DefaultConfigChangeListener;
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.api.CuratorEvent;
 import org.apache.curator.framework.api.CuratorEventType;
 import org.apache.curator.framework.api.CuratorListener;
 import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,7 +24,6 @@ public class CuratorEventListener implements CuratorListener {
     private Logger logger = LoggerFactory.getLogger(CuratorEventListener.class);
     private CuratorClient client;
     private ConfigChangeListener configChangeListener = new DefaultConfigChangeListener();
-    private static final String JCONF_PREFIX="/JCONF/CONFIG";
 
     public CuratorEventListener(CuratorClient client) {
         this.client = client;
@@ -46,9 +48,22 @@ public class CuratorEventListener implements CuratorListener {
     private void processEvent(WatchedEvent watchedEvent) {
         String path = watchedEvent.getPath();
         ConfigInfo configInfo=parseConfig(path);
+        int eventType=0;
+        if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.None.getIntValue()) {
+            return;
+        } else if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.NodeCreated.getIntValue()) {
+            eventType=Constants.CONFIG_CREATE;
+        } else if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.NodeDataChanged.getIntValue()) {
+            eventType=Constants.CONFIG_UPDATE;
+        } else if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.NodeDeleted.getIntValue()) {
+            eventType=Constants.CONFIG_DELETE;
+        } else {
+            return;
+        }
         ConfigChangeEvent configChangeEvent=new ConfigChangeEvent();
         configChangeEvent.setKey(configInfo.getKey());
         configChangeEvent.setValue(configInfo.getValue());
+        configChangeEvent.setEventType(eventType);
         configChangeListener.onChange(configChangeEvent);
     }
 
@@ -60,10 +75,10 @@ public class CuratorEventListener implements CuratorListener {
 
 
     public ConfigInfo parseConfig(String path){
-        if (path == null||!path.startsWith(JCONF_PREFIX)) {
+        if (path == null||!path.startsWith(Constants.JCONF_PREFEX)) {
             return null;
         }
-        String key=path.substring(JCONF_PREFIX.length()+1);
+        String key=path.substring(Constants.JCONF_PREFEX.length()+1);
         String value=null;
         try {
             value = client.get(path);
@@ -75,26 +90,4 @@ public class CuratorEventListener implements CuratorListener {
         configInfo.setValue(value);
         return configInfo;
     }
-
-
-    class ConfigInfo {
-        String key;
-        String value;
-        public String getKey() {
-            return key;
-        }
-
-        public void setKey(String key) {
-            this.key = key;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
-    }
-
 }

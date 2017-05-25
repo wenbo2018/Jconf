@@ -3,7 +3,15 @@
 
 Jconf is a distributed configuration management platform.
 
+# Quick Start
 
-#Jconf UI chart
-==================================
+Configure configuration center address
+
+/data/app/jconf.properties(Linux),C:/data/app/jconf.properties(Win)
+
+jconf.properties:
+zookeeper.register.address=170.0.0.1,170.0.0.2,170.0.0.3
+
+# Jconf Interface
+
  ![image](https://github.com/wenbo2018/Jconf/blob/master/resources/ui.jpeg)

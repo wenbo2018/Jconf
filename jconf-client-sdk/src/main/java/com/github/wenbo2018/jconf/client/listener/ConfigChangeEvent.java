@@ -7,6 +7,7 @@ public class ConfigChangeEvent {
 
     private String key;
     private String value;
+    private int eventType;
 
     public String getKey() {
         return key;
@@ -32,11 +33,20 @@ public class ConfigChangeEvent {
         this.value = value;
     }
 
+    public int getEventType() {
+        return eventType;
+    }
+
+    public void setEventType(int eventType) {
+        this.eventType = eventType;
+    }
+
     @Override
     public String toString() {
         return "ConfigChangeEvent{" +
                 "key='" + key + '\'' +
                 ", value='" + value + '\'' +
+                ", eventType=" + eventType +
                 '}';
     }
 }

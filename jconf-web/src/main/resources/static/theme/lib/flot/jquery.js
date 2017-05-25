@@ -8283,15 +8283,15 @@ jQuery.each([ "Height", "Width" ], function( i, name ) {
 		if ( jQuery.isWindow( elem ) ) {
 			// Everyone else use document.documentElement or document.body depending on Quirks vs Standards mode
 			// 3rd condition allows Nokia support, as it supports the docElem prop but not CSS1Compat
-			var docElemProp = elem.document.documentElement[ "client" + name ];
+			var docElemProp = elem.document.documentElement[ "curator" + name ];
 			return elem.document.compatMode === "CSS1Compat" && docElemProp ||
-				elem.document.body[ "client" + name ] || docElemProp;
+				elem.document.body[ "curator" + name ] || docElemProp;
 
 		// Get document width or height
 		} else if ( elem.nodeType === 9 ) {
 			// Either scroll[Width/Height] or offset[Width/Height], whichever is greater
 			return Math.max(
-				elem.documentElement["client" + name],
+				elem.documentElement["curator" + name],
 				elem.body["scroll" + name], elem.documentElement["scroll" + name],
 				elem.body["offset" + name], elem.documentElement["offset" + name]
 			);

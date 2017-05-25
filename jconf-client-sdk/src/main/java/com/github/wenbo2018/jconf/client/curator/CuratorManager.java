@@ -1,5 +1,6 @@
-package com.github.wenbo2018.jconf.client.client;
+package com.github.wenbo2018.jconf.client.curator;
 
+import com.github.wenbo2018.jconf.client.constants.Constants;
 import com.github.wenbo2018.jconf.common.config.ConfigManager;
 import com.github.wenbo2018.jconf.common.config.ConfigManagerLoader;
 import org.slf4j.Logger;
@@ -20,8 +21,7 @@ public class CuratorManager {
     private static CuratorManager instance = new CuratorManager();
     private static ConcurrentMap<String, CuratorClient> curatorClientCache = new ConcurrentHashMap<>();
     private static ConfigManager configManager;
-    private static String ZOOKEEPER_REGISTER_ADDRESS="zookeeper.register.address";
-    private static List<CuratorClient> clientList=new ArrayList<>();
+    private static List<CuratorClient> clientList = new ArrayList<>();
 
     public static CuratorManager getInstance() {
         if (!isInit) {
@@ -37,35 +37,35 @@ public class CuratorManager {
 
     private void init() {
         this.configManager = ConfigManagerLoader.getConfigManager();
-        String addressSplits=configManager.getStringValue(ZOOKEEPER_REGISTER_ADDRESS);
-        String [] addressArray=addressSplits.trim().split(",");
-        if (addressArray.length<=0) {
-            logger.error("zk client address is not found");
+        String addressSplits = configManager.getStringValue(Constants.ZOOKEEPER_REGISTER_ADDRESS);
+        String[] addressArray = addressSplits.trim().split(",");
+        if (addressArray.length <= 0) {
+            logger.error("zk curator address is not found");
         } else {
-            for (int i=0;i<addressArray.length;i++) {
-                String address=addressArray[i];
-                CuratorClient curatorClient=createCuratorClient(address);
-                curatorClientCache.put(address,curatorClient);
+            for (int i = 0; i < addressArray.length; i++) {
+                String address = addressArray[i];
+                CuratorClient curatorClient = createCuratorClient(address);
+                curatorClientCache.put(address, curatorClient);
                 clientList.add(curatorClient);
             }
         }
     }
 
     public CuratorClient createCuratorClient(String address) {
-        CuratorClient curatorClient=null;
+        CuratorClient curatorClient = null;
         try {
-            curatorClient=new CuratorClient(address);
-            logger.info("zk client success create{}:",address);
+            curatorClient = new CuratorClient(address);
+            logger.info("zk curator success create{}:", address);
         } catch (InterruptedException e) {
-            logger.error("create curator client error",e);
+            logger.error("create curator curator error", e);
         }
         return curatorClient;
     }
 
-    public  CuratorClient  getCuratorClient(){
-        CuratorClient curatorClient=null;
-        if (clientList.size()<=0) {
-            logger.error("not found one curator client");
+    public CuratorClient getCuratorClient() {
+        CuratorClient curatorClient = null;
+        if (clientList.size() <= 0) {
+            logger.error("not found one curator curator");
         }
         return clientList.get(0);
     }
