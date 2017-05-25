@@ -9,6 +9,7 @@ import com.github.wenbo2018.jconf.client.listener.api.ConfigInfoChangeListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
@@ -42,7 +43,7 @@ public class JconfCache {
         JconfigEventListener.addListener(configInfoChangeListener);
     }
 
-    String getValue(String key) {
+    public String getValue(String key) {
         if (key == null) {
             throw new JconfException("jconf key is null");
         }
@@ -57,6 +58,10 @@ public class JconfCache {
             }
         }
         return value;
+    }
+
+    public ConcurrentMap<String, String> getJconfCache() {
+        return jconfCache;
     }
 
     private class InnerJconfCacheConfigChangeListener implements ConfigInfoChangeListener {
