@@ -1,5 +1,6 @@
 package com.github.wenbo2018.jconf.client;
 
+import com.github.wenbo2018.jconf.client.constants.Constants;
 import com.github.wenbo2018.jconf.client.exception.JconfException;
 import com.github.wenbo2018.jconf.common.extension.ExtensionLoader;
 import com.github.wenbo2018.jconf.client.listener.ConfigChangeEvent;
@@ -58,19 +59,28 @@ public class JconfCache {
         return value;
     }
 
-    class InnerJconfCacheConfigChangeListener implements ConfigInfoChangeListener {
+    private class InnerJconfCacheConfigChangeListener implements ConfigInfoChangeListener {
 
         @Override
         public void configChange(ConfigChangeEvent configChangeEvent) {
-            logger.info("config change{};",configChangeEvent.toString());
-            String key = configChangeEvent.getKey();
-            String value = configChangeEvent.getValue();
-            if (!jconfCache.containsKey(key)) {
-                jconfCache.put(key,value);
+            if (configChangeEvent.getEventType() == 0) {
+                return;
+            } else if (configChangeEvent.getEventType() == Constants.CONFIG_CREATE) {
+                String key = configChangeEvent.getKey();
+                String value = configChangeEvent.getValue();
+                jconfCache.put(key, value);
+                logger.info("config create:{}", configChangeEvent.toString());
+            } else if (configChangeEvent.getEventType() == Constants.CONFIG_DELETE) {
+                jconfCache.remove(configChangeEvent.getKey());
+                logger.info("config delete:{}", configChangeEvent.toString());
+            } else if (configChangeEvent.getEventType() == Constants.CONFIG_UPDATE) {
+                String key = configChangeEvent.getKey();
+                String value = configChangeEvent.getValue();
+                jconfCache.put(key, value);
+                logger.info("config update:{}", configChangeEvent.toString());
+            } else {
+                return;
             }
-            jconfCache.put(key,value);
-            logger.info("config change success{};",configChangeEvent.toString());
         }
     }
-
 }

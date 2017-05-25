@@ -11,6 +11,7 @@ import org.apache.curator.framework.api.CuratorEvent;
 import org.apache.curator.framework.api.CuratorEventType;
 import org.apache.curator.framework.api.CuratorListener;
 import org.apache.zookeeper.WatchedEvent;
+import org.apache.zookeeper.Watcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,9 +48,22 @@ public class CuratorEventListener implements CuratorListener {
     private void processEvent(WatchedEvent watchedEvent) {
         String path = watchedEvent.getPath();
         ConfigInfo configInfo=parseConfig(path);
+        int eventType=0;
+        if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.None.getIntValue()) {
+            return;
+        } else if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.NodeCreated.getIntValue()) {
+            eventType=Constants.CONFIG_CREATE;
+        } else if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.NodeDataChanged.getIntValue()) {
+            eventType=Constants.CONFIG_UPDATE;
+        } else if (watchedEvent.getType().getIntValue()== Watcher.Event.EventType.NodeDeleted.getIntValue()) {
+            eventType=Constants.CONFIG_DELETE;
+        } else {
+            return;
+        }
         ConfigChangeEvent configChangeEvent=new ConfigChangeEvent();
         configChangeEvent.setKey(configInfo.getKey());
         configChangeEvent.setValue(configInfo.getValue());
+        configChangeEvent.setEventType(eventType);
         configChangeListener.onChange(configChangeEvent);
     }
 
