@@ -1,5 +1,6 @@
-package com.github.wenbo2018.jconf.client;
+package com.github.wenbo2018.jconf.client.cache;
 
+import com.github.wenbo2018.jconf.client.JconfConfig;
 import com.github.wenbo2018.jconf.client.constants.Constants;
 import com.github.wenbo2018.jconf.client.exception.JconfException;
 import com.github.wenbo2018.jconf.common.extension.ExtensionLoader;
@@ -9,7 +10,6 @@ import com.github.wenbo2018.jconf.client.listener.api.ConfigInfoChangeListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 

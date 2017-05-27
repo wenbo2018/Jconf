@@ -1,7 +1,6 @@
 package com.github.wenbo2018.jconf.client.spring;
 
-import com.github.wenbo2018.jconf.client.JconfCache;
-import com.github.wenbo2018.jconf.common.util.CollectionUtils;
+import com.github.wenbo2018.jconf.client.cache.JconfCache;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;

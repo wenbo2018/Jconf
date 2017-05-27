@@ -39,6 +39,4 @@ public class ConfigPushListener implements ApplicationListener<ContextRefreshedE
         }
         logger.info("config push success!");
     }
-
-
 }

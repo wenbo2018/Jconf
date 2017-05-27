@@ -1,5 +1,6 @@
 package com.github.wenbo2018.jconf.client;
 
+import com.github.wenbo2018.jconf.client.cache.JconfCache;
 import com.github.wenbo2018.jconf.client.curator.CuratorManager;
 import com.github.wenbo2018.jconf.common.config.ConfigManagerLoader;
 
