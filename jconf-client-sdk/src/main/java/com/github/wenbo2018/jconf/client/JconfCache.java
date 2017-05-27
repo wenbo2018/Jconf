@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentMap;
 public class JconfCache {
 
     private static Logger logger = LoggerFactory.getLogger(JconfCache.class);
-    private static ConcurrentMap<String, String> jconfCache = new ConcurrentHashMap<>();
+    private static ConcurrentMap<String, String> jconfCacheMap = new ConcurrentHashMap<>();
     private static JconfConfig jconfConfig;
     private static volatile boolean isInit = false;
     private static JconfCache instance = new JconfCache();
@@ -31,6 +31,7 @@ public class JconfCache {
             synchronized (JconfCache.class) {
                 if (!isInit) {
                     instance.init();
+                    instance.sync();
                     isInit = true;
                 }
             }
@@ -43,25 +44,30 @@ public class JconfCache {
         JconfigEventListener.addListener(configInfoChangeListener);
     }
 
+    private void sync() {
+        jconfCacheMap=jconfConfig.sync();
+        logger.info("jconf config data sync success");
+    }
+
     public String getValue(String key) {
         if (key == null) {
             throw new JconfException("jconf key is null");
         }
         String value = null;
-        value = jconfCache.get(key);
+        value = jconfCacheMap.get(key);
         if (value == null) {
             value = jconfConfig.getValue(key);
             if (value == null) {
                 logger.warn("value is null from zk config center{}:", key);
             } else {
-                jconfCache.put(key, value);
+                jconfCacheMap.put(key, value);
             }
         }
         return value;
     }
 
     public ConcurrentMap<String, String> getJconfCache() {
-        return jconfCache;
+        return jconfCacheMap;
     }
 
     private class InnerJconfCacheConfigChangeListener implements ConfigInfoChangeListener {
@@ -73,15 +79,15 @@ public class JconfCache {
             } else if (configChangeEvent.getEventType() == Constants.CONFIG_CREATE) {
                 String key = configChangeEvent.getKey();
                 String value = configChangeEvent.getValue();
-                jconfCache.put(key, value);
+                jconfCacheMap.put(key, value);
                 logger.info("config create:{}", configChangeEvent.toString());
             } else if (configChangeEvent.getEventType() == Constants.CONFIG_DELETE) {
-                jconfCache.remove(configChangeEvent.getKey());
+                jconfCacheMap.remove(configChangeEvent.getKey());
                 logger.info("config delete:{}", configChangeEvent.toString());
             } else if (configChangeEvent.getEventType() == Constants.CONFIG_UPDATE) {
                 String key = configChangeEvent.getKey();
                 String value = configChangeEvent.getValue();
-                jconfCache.put(key, value);
+                jconfCacheMap.put(key, value);
                 logger.info("config update:{}", configChangeEvent.toString());
             } else {
                 return;
