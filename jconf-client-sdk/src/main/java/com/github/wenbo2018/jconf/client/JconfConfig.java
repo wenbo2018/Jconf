@@ -1,7 +1,7 @@
 package com.github.wenbo2018.jconf.client;
 
 
-import java.util.Map;
+import java.util.concurrent.ConcurrentMap;
 
 /**
  * Created by shenwenbo on 2017/4/16.
@@ -9,5 +9,7 @@ import java.util.Map;
 public interface JconfConfig {
 
      String getValue(String key);
+
+     ConcurrentMap<String,String> sync();
 
 }

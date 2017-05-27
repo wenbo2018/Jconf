@@ -10,9 +10,7 @@ public class CuratorClientTest {
     public static void main(String[] args) throws Exception {
         CuratorManager curatorManager=new CuratorManager();
         CuratorClient curatorClient=curatorManager.createCuratorClient("202.38.214.166");
-        if (!curatorClient.exists("/JCONF/CONFs"))
-            curatorClient.creatrPersistentNode("/JCONF/CONFs");
-        curatorClient.set("/JCONF/CONFs/test","cccccccccccc");
+
 
     }
 }
