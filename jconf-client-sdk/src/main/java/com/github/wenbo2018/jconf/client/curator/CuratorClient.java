@@ -83,7 +83,6 @@ public class CuratorClient {
         return addressList;
     }
 
-
     public String get(String path) throws Exception {
         return get(path, true);
     }
@@ -100,52 +99,11 @@ public class CuratorClient {
         }
     }
 
-
-    public void set(String path, Object value) throws Exception {
-        byte[] bytes = (value == null ? new byte[0] : value.toString().getBytes(CHARSET));
-        if (exists(path, false)) {
-            zookeeperClient.setData().forPath(path, bytes);
-            logger.debug("set value of node " + path + " to " + value);
-        } else {
-            zookeeperClient.create().creatingParentsIfNeeded().forPath(path, bytes);
-            logger.debug("create node " + path + " value " + value);
-        }
-    }
-
-
-    public void create(String node, String value) throws Exception {
-        byte[] bytes = (value == null ? new byte[0] : value.toString().getBytes(CHARSET));
-        String addressNode = zookeeperClient.create().withMode(CreateMode.EPHEMERAL).forPath(node, bytes);
-        logger.info("create address node:", addressNode);
-    }
-
-
-    public void creatrPersistentNode(String path) throws Exception {
-        if (!exists(path, false)) {
-            zookeeperClient.create().creatingParentsIfNeeded().forPath(path);
-            logger.info("create registry node:", path);
-        }
-    }
-
     public void delete(String path) throws Exception {
         zookeeperClient.delete().forPath(path);
         if (logger.isInfoEnabled()) {
             logger.info("delete node " + path);
         }
-    }
-
-
-    public void deleteIfExists(String path) throws Exception {
-        if (exists(path, false)) {
-            delete(path);
-        } else {
-            logger.warn("node " + path + " not exists!");
-        }
-    }
-
-
-    public void watch(String path) throws Exception {
-        zookeeperClient.checkExists().watched().forPath(path);
     }
 
     private void close(CuratorFramework client) {
@@ -159,12 +117,10 @@ public class CuratorClient {
         }
     }
 
-
     public boolean exists(String path) throws Exception {
         Stat stat = zookeeperClient.checkExists().watched().forPath(path);
         return stat != null;
     }
-
 
     public boolean exists(String path, boolean watch) throws Exception {
         Stat stat = watch ? zookeeperClient.checkExists().watched().forPath(path) : zookeeperClient.checkExists().forPath(path);
