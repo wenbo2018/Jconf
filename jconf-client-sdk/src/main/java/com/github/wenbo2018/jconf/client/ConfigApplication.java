@@ -1,6 +1,6 @@
 package com.github.wenbo2018.jconf.client;
 
-import com.github.wenbo2018.jconf.client.cache.JconfCache;
+import com.github.wenbo2018.jconf.client.cache.ConfigCacheLoader;
 import com.github.wenbo2018.jconf.client.curator.CuratorManager;
 import com.github.wenbo2018.jconf.common.config.ConfigManagerLoader;
 import org.slf4j.Logger;
@@ -16,15 +16,14 @@ public class ConfigApplication {
 
     static {
         if (!isInit) {
-            synchronized (ConfigApplication.class) {
                 if (!isInit) {
                     ConfigManagerLoader.init();
                     CuratorManager.getInstance();
-                    JconfCache.getInstance();
+                    ConfigCacheLoader.init();
+                    Jconf.getInstance();
                     isInit = true;
                     logger.info("ConfigApplication started succcess");
                 }
-            }
         }
     }
 
