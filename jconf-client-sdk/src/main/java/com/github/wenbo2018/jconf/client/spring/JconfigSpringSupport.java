@@ -17,9 +17,9 @@ import java.util.concurrent.ConcurrentMap;
 /**
  * Created by wenbo.shen on 2017/5/24.
  */
-public class JconfigPropertyPlaceholderConfigurer extends PropertyPlaceholderConfigurer {
+public class JconfigSpringSupport extends PropertyPlaceholderConfigurer {
 
-    private static Logger logger = LoggerFactory.getLogger(JconfigPropertyPlaceholderConfigurer.class);
+    private static Logger logger = LoggerFactory.getLogger(JconfigSpringSupport.class);
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
@@ -29,14 +29,12 @@ public class JconfigPropertyPlaceholderConfigurer extends PropertyPlaceholderCon
             convertProperties(mergedProps);
             processProperties(beanFactory, mergedProps);
         } catch (IOException ex) {
+            logger.error("BeanInitializationException:{}",ex);
             throw new BeanInitializationException("Jconf Could not load properties", ex);
         }
     }
 
-    /***
-     * 从Jconf集中配置中心获取配置并注入到Properties文件中
-     * @return
-     */
+
     private void getPropertiesFromJconf(Properties properties) {
         ConcurrentMap<String, String> cache = JconfCache.getInstance().getJconfCache();
         if (cache == null || cache.isEmpty()) {

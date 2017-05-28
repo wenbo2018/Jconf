@@ -8,7 +8,7 @@
          http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <bean id="jconfigPropertyPlaceholderConfigurer" class="com.github.wenbo2018.jconf.client.spring.JconfigPropertyPlaceholderConfigurer"/>
+    <bean class="com.github.wenbo2018.jconf.client.spring.JconfigSpringSupport"/>
 
     <bean id="user" class="com.github.wenbo2018.demo.bean.User">
         <property name="userName">

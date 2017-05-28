@@ -1,9 +1,13 @@
 package com.github.wenbo2018.jconf.client;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.github.wenbo2018.jconf.client.cache.JconfCache;
 import com.github.wenbo2018.jconf.common.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.Map;
 
 /**
  * Created by wenbo.shen on 2017/4/15.
@@ -44,6 +48,12 @@ public class Jconf {
     public static int  getInt(String key) {
         String value = Jconf.getInstance().jconfCache.getValue(key);
         return StringUtils.parseInt(value);
+    }
+
+    public static Map<String,String> getMap(String key) {
+        String value = Jconf.getInstance().jconfCache.getValue(key);
+        JSON json= (JSON) JSON.toJSON(value);
+        return JSON.toJavaObject(json,Map.class);
     }
 
     public static void main(String[] args) {

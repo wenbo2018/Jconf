@@ -1,4 +1,4 @@
-package com.github.wenbo2018.jconf.web;
+package com.github.wenbo2018.jconf.web.cuator;
 
 import com.github.wenbo2018.jconf.core.registry.CuratorRegistry;
 import com.github.wenbo2018.jconf.core.registry.Registry;
