@@ -1,6 +1,6 @@
 package com.github.wenbo2018.jconf.web.listener;
 
-import com.github.wenbo2018.jconf.web.RegistryManager;
+import com.github.wenbo2018.jconf.web.cuator.RegistryManager;
 import com.github.wenbo2018.jconf.web.dao.ConfigDao;
 import com.github.wenbo2018.jconf.web.dto.Config;
 import org.slf4j.Logger;
@@ -10,7 +10,6 @@ import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.util.CollectionUtils;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -39,6 +38,4 @@ public class ConfigPushListener implements ApplicationListener<ContextRefreshedE
         }
         logger.info("config push success!");
     }
-
-
 }

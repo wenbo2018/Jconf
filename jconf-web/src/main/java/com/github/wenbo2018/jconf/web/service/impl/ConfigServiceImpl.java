@@ -2,7 +2,7 @@ package com.github.wenbo2018.jconf.web.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.github.wenbo2018.jconf.web.RegistryManager;
+import com.github.wenbo2018.jconf.web.cuator.RegistryManager;
 import com.github.wenbo2018.jconf.web.dao.ConfigDao;
 import com.github.wenbo2018.jconf.web.dto.Config;
 import com.github.wenbo2018.jconf.web.service.ConfigService;

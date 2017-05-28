@@ -1,12 +1,12 @@
 package com.github.wenbo2018.jconf.web.web;
 
 import com.github.pagehelper.PageInfo;
+import com.github.wenbo2018.jconf.common.util.StringUtils;
 import com.github.wenbo2018.jconf.web.bean.CommonResultJson;
 import com.github.wenbo2018.jconf.web.constants.ResultCode;
 import com.github.wenbo2018.jconf.web.dto.Config;
 import com.github.wenbo2018.jconf.web.dto.PageModel;
 import com.github.wenbo2018.jconf.web.service.ConfigService;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

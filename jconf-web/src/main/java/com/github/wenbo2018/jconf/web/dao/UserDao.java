@@ -7,10 +7,10 @@ import org.apache.ibatis.annotations.Param;
  * Created by wenbo.shen on 2017/5/19.
  */
 public interface UserDao {
-
-    int addUser(User user);
-    void delete(int userId);
-    User loadUserByUserId(int userId);
+    int addUser(@Param("user")User user);
+    void delete(@Param("userId") int userId);
+    User loadUserByUserId(@Param("userId")int userId);
     User loadUserByUserNameAndPassWord(@Param("userName") String userName, @Param("passWord")String passWord);
-
+    User loadUserByUserName(@Param("userName") String userName);
+    User loadUserByToken(@Param("token") String token);
 }

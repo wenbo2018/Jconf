@@ -104,6 +104,16 @@
             <artifactId>jackson-mapper-asl</artifactId>
             <version>${version.jackson-mapper-asl}</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+
+
+        <!-- https://mvnrepository.com/artifact/com.nimbusds/nimbus-jose-jwt -->
+        <dependency>
+            <groupId>com.nimbusds</groupId>
+            <artifactId>nimbus-jose-jwt</artifactId>
+            <version>4.36</version>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>

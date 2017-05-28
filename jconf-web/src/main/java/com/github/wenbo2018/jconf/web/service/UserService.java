@@ -9,4 +9,6 @@ public interface UserService {
     int addUser(User user);
     User loadUserByUserId(int userId);
     User loadUserByUserNameAndPassWord(String userName,String passWord);
+    User loadUserByUserName(String userName);
+    User loadUserByToken(String token);
 }
