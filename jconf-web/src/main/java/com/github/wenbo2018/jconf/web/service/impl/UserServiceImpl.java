@@ -51,4 +51,9 @@ public class UserServiceImpl implements UserService {
         }
         return userDao.loadUserByToken(token);
     }
+
+    @Override
+    public int updateUserTokenByUserId(String token, int userId) {
+        return userDao.updateUserTokenByUserId(token,userId);
+    }
 }

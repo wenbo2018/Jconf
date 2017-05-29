@@ -6,6 +6,7 @@ import com.github.wenbo2018.jconf.web.bean.CommonResultJson;
 import com.github.wenbo2018.jconf.web.constants.ResultCode;
 import com.github.wenbo2018.jconf.web.dto.Config;
 import com.github.wenbo2018.jconf.web.dto.PageModel;
+import com.github.wenbo2018.jconf.web.dto.User;
 import com.github.wenbo2018.jconf.web.service.ConfigService;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("/jconf/admin/config")
-public class ConfigController {
+public class ConfigController extends AbstractController{
 
     @Autowired
     private ConfigService configService;
@@ -43,10 +44,10 @@ public class ConfigController {
 
     @ResponseBody
     @RequestMapping(value = "/add")
-    public CommonResultJson configUpdate(String key, String value, @Param("false") Integer env, @Param("false") Integer projectId, String userName, String email) {
+    public CommonResultJson configUpdate(String key, String value, @Param("false") Integer env, @Param("false") Integer projectId, Integer  cofing_type) {
         CommonResultJson result = new CommonResultJson();
         result.setCode(ResultCode.SUCCESS);
-        if (StringUtils.isEmpty(key)||StringUtils.isEmpty(value)||StringUtils.isEmpty(userName)||StringUtils.isEmpty(email)) {
+        if (StringUtils.isEmpty(key)||StringUtils.isEmpty(value)|| cofing_type<=0) {
             result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("请输入完整的参数");
             return result;
@@ -56,13 +57,20 @@ public class ConfigController {
             result.setMessage("请输入完整的参数");
             return result;
         }
+        User user = getUser();
+        if (user==null) {
+            result.setCode(ResultCode.ERROR);
+            result.setMessage("服务端异常!");
+            return result;
+        }
         Config config=new Config();
         config.setEnv(env);
         config.setKey(key);
         config.setProjectId(projectId);
-        config.setUserName(userName);
-        config.setUserEmail(email);
+        config.setConfigType(cofing_type);
         config.setValue(value);
+        config.setUserName(user.getUserName());
+        config.setUserEmail(user.getUserEmail());
         configService.add(config);
         return result;
     }

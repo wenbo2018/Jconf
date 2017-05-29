@@ -8,9 +8,9 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface UserDao {
     int addUser(@Param("user")User user);
-    void delete(@Param("userId") int userId);
     User loadUserByUserId(@Param("userId")int userId);
     User loadUserByUserNameAndPassWord(@Param("userName") String userName, @Param("passWord")String passWord);
     User loadUserByUserName(@Param("userName") String userName);
     User loadUserByToken(@Param("token") String token);
+    int updateUserTokenByUserId(@Param("token") String token,@Param("userId")int userId);
 }

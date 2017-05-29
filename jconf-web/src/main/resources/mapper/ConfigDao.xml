@@ -9,6 +9,7 @@
         <result column="Config_Value" property="value" jdbcType="VARCHAR" />
         <result column="Env" property="env" jdbcType="VARCHAR" />
         <result column="ProjectId" property="projectId" jdbcType="INTEGER" />
+        <result column="ConfigType" property="configType" jdbcType="INTEGER" />
         <result column="UserName" property="userName" jdbcType="VARCHAR" />
         <result column="UserEmail" property="userEmail" jdbcType="VARCHAR" />
         <result column="DateTime" property="dateTime" jdbcType="TIMESTAMP"/>
@@ -18,6 +19,7 @@
         insert into Config (
         Config_Key,
         Config_Value,
+        ConfigType,
         Env,
         ProjectId,
         UserName,
@@ -27,6 +29,7 @@
         values (
         #{key},
         #{value},
+        #{configType},
         #{env},
         #{projectId},
         #{userName},
@@ -40,7 +43,7 @@
     </select>
 
     <select id="load" resultMap="BaseResultMap" parameterType="int">
-        SELECT *FROM  Config WHERE  Id=Id=#{id}#
+        SELECT *FROM  Config WHERE  Id=#{id}#
     </select>
 
     <delete id="delete" parameterType="int">
@@ -48,7 +51,7 @@
     </delete>
 
     <update id="update"  >
-        UPDATE Config SET Value=#{1}# WHERE Id=#{0};
+        UPDATE Config SET Config_Value=#{value} WHERE Id=#{id};
     </update>
 
 

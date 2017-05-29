@@ -11,4 +11,5 @@ public interface UserService {
     User loadUserByUserNameAndPassWord(String userName,String passWord);
     User loadUserByUserName(String userName);
     User loadUserByToken(String token);
+    int updateUserTokenByUserId(String token,int userId);
 }

@@ -3,31 +3,36 @@ $(function () {
         configAdd();
 
     });
-    $("#content").on("click","#config_delete",function(){
+    $("#content").on("click", "#config_delete", function () {
         configDelete();
     });
-    $("#content").on("click","#config_update",function(){
+    $("#content").on("click", "#config_update", function () {
+        var str = $(this).attr("name");
+        var strs = new Array(); //定义一数组
+        strs = str.split(","); //字符分割
+        var id = strs[0];
+        var key = strs[1];
+        $("#config_update_key").val(key);
+        $("#config_update_key").attr('disabled', true);
+        $("#update_config_id").val(id);
+    });
+    $("#content").on("click", "#look_config", function () {
+        var str = $(this).attr("name");
+        $("#config_value").text(str);
+    });
+
+
+    $('#config_update_submit').click(function () {//ID为test的元素点击时
         configUpdate();
     });
-});
-function configEdit() {
-    var str= $("#config_update").attr("name");
-    var strs= new Array(); //定义一数组
-    strs=str.split(","); //字符分割
-    var id=strs[0];
-    var key=strs[1];
-    $("#config_update_key").val(key);
-    $("#config_update_key").attr('disabled',true);
-    $("#config_id").val(id);
-}
 
+});
 
 
 function configAdd() {
     var key = $("#cofing_key").val();
     var value = $("#cofing_value").val();
-    var userName = $("#cofing_userName").val();
-    var userEmail = $("#cofing_userMail").val();
+    var cofing_type = $("#cofing_type").val();
     var projectId = $("#cofing_projectId").val();
     var env = $("#config_env option:selected").val();
     $.ajax({
@@ -36,7 +41,7 @@ function configAdd() {
         //提交的网址
         url: "/jconf/admin/config/add",
         //提交的数据
-        data: {userName: userName, email: userEmail, key: key, value: value, projectId: projectId, env: env},
+        data: {cofing_type: cofing_type, key: key, value: value, projectId: projectId, env: env},
         //返回数据的格式
         datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
         // //在请求之前调用的函数
@@ -66,7 +71,6 @@ function configAdd() {
 }
 
 
-
 function configDelete() {
 
 
@@ -77,7 +81,7 @@ function configDelete() {
         //提交的网址
         url: "/jconf/admin/config/delete",
         //提交的数据
-        data: {id:id},
+        data: {id: id},
         //返回数据的格式
         datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
         // //在请求之前调用的函数
@@ -109,16 +113,15 @@ function configDelete() {
 
 function configUpdate() {
 
-
-    var id = $("#config_delete").attr("name");
-    var value= $("#config_value").val();
+    var id = $("#update_config_id").val();
+    var value = $("#update_config_value").val();
     $.ajax({
         //提交数据的类型 POST GET
         type: "POST",
         //提交的网址
         url: "/jconf/admin/config/update",
         //提交的数据
-        data: {id:id,value:value},
+        data: {id: id, value: value},
         //返回数据的格式
         datatype: "json",//"xml", "html", "script", "json", "jsonp", "text".
         // //在请求之前调用的函数
@@ -130,6 +133,7 @@ function configUpdate() {
                 myAlert(data.message);
             }
             if (data.code == 200) {
+                $('#mymodal').modal('hide');
                 myAlert("修改成功!");
             }
         },
@@ -148,8 +152,8 @@ function configUpdate() {
 
 
 
-/*我自己的弹框（基于 bootstrap）*/
-function myAlert(info){
+
+function myAlert(info) {
     $("#myAlertContent").text(info);
     $("#myAlert").modal("show");
 }

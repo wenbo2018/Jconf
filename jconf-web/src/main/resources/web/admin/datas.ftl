@@ -91,6 +91,7 @@
                                     <th class="center">#</th>
                                     <th class="center">Key</th>
                                     <th class="center">Value</th>
+                                    <th class="center">类型</th>
                                     <th class="center">环境</th>
                                     <th class="center">项目ID</th>
                                     <th class="center">负责人</th>
@@ -167,9 +168,17 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-1 control-label" for="ds_username">邮箱:</label>
+                                    <label class="col-sm-1 control-label" for="ds_username">类型:</label>
+                                    <#--<div class="col-sm-5">-->
+                                        <#--<input class="form-control" name="cofing_userMail" id="cofing_userMail" type="text" placeholder="root"/>-->
+                                    <#--</div>-->
                                     <div class="col-sm-5">
-                                        <input class="form-control" name="cofing_userMail" id="cofing_userMail" type="text" placeholder="root"/>
+                                        <select id="cofing_type" name="cofing_type" class="form-control">
+                                            <option value="1">String</option>
+                                            <option value="2">Integer</option>
+                                            <option value="3">Boolean</option>
+                                            <option value="4">Double</option>
+                                        </select>
                                     </div>
                                     <label class="col-sm-1 control-label" for="ds_password">环境</label>
                                     <div class="col-sm-5">
@@ -204,17 +213,17 @@
                                 <div class="form-group">
                                     <label class="col-sm-1 control-label" for="ds_host">Key:</label>
                                     <div class="col-sm-5">
-                                        <input class="form-control" id="config_id" type="hidden" value="" placeholder="msn"/>
+                                        <input class="form-control" id="update_config_id" type="hidden" value="" placeholder="msn"/>
                                         <input class="form-control" id="config_update_key" type="text" value=""/>
                                     </div>
                                     <label class="col-sm-1 control-label" for="ds_name">Value:</label>
                                     <div class="col-sm-5">
-                                        <input class="form-control" id="config_update_value" type="text" placeholder="msh"/>
+                                        <input class="form-control" id="update_config_value" type="text" placeholder="msh"/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="form-group text-center">
-                                        <button class="btn btn-success btn-large" type="button" type="config_update">保存</button>
+                                        <button class="btn btn-success btn-large" type="button" id="config_update_submit">保存</button>
                                     </div>
                                 </div>
                             </fieldset>
@@ -237,6 +246,26 @@
                 <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
             </div>
             <div class="modal-body text-center" id="myAlertContent">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade look_config" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-center" id="mySmallModalLabel">配置信息</h4>
+            </div>
+            <div id="config_value" style="min-height:150px;padding: 20px;">
 
             </div>
         </div>

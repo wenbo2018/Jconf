@@ -1,6 +1,7 @@
 package com.github.wenbo2018.jconf.web.dao;
 
 import com.github.wenbo2018.jconf.web.dto.Config;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -16,5 +17,5 @@ public interface ConfigDao {
 
     Config load(int id);
 
-    void update(int id,String value);
+    void update( @Param("id") int id,@Param("value") String value);
 }
