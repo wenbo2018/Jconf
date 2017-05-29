@@ -13,8 +13,8 @@ import org.springframework.boot.web.servlet.ServletComponentScan;
  * Created by shenwenbo on 2017/4/14.
  */
 @SpringBootApplication
-@ServletComponentScan
 @MapperScan("com.github.wenbo2018.jconf.web.dao")
+@ServletComponentScan
 public class Application {
     private Logger logger= LoggerFactory.getLogger(Application.class);
 

@@ -5,16 +5,20 @@ import com.github.wenbo2018.jconf.web.bean.CommonResultJson;
 import com.github.wenbo2018.jconf.web.constants.ResultCode;
 import com.github.wenbo2018.jconf.web.dto.User;
 import com.github.wenbo2018.jconf.web.service.UserService;
+import com.github.wenbo2018.jconf.web.utils.MD5Utils;
 import com.github.wenbo2018.jconf.web.utils.WebUtils;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Logger;
 
 /**
  * Created by wenbo.shen on 2017/5/19.
@@ -23,12 +27,14 @@ import java.util.Map;
 @RequestMapping(value = "/jconf/user")
 public class UserController extends AbstractController {
 
+    private static org.slf4j.Logger logger= LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserService userService;
 
     @RequestMapping(value = "login/index",method = RequestMethod.GET)
     public String loginIndex() {
-        return "user/index";
+        return "admin/login";
     }
 
     /**
@@ -47,8 +53,13 @@ public class UserController extends AbstractController {
             result.setCode(ResultCode.PARAMETER_ERROR);
             return result;
         }
-        User user = userService.loadUserByUserNameAndPassWord(userName,passWord);
-
+        String md5Pass=null;
+        try {
+            md5Pass= MD5Utils.EncoderByMd5(passWord);
+        } catch (NoSuchAlgorithmException e) {
+            logger.error("md5 encodeing error:{}",e);
+        }
+        User user = userService.loadUserByUserNameAndPassWord(userName,md5Pass);
         if (user == null) {
             result.setMessage("用户名或密码错误!");
             result.setCode(ResultCode.PARAMETER_ERROR);
@@ -61,10 +72,12 @@ public class UserController extends AbstractController {
         payload.put("iat", date.getTime());//生成时间
         payload.put("ext",date.getTime()+1800);//过期时间1小时
         String _token = WebUtils.produceToken(payload);
+        userService.updateUserTokenByUserId(_token,user.getUserId());
         WebUtils.addStringToCookie(response,"token",_token,1800);
         result.setMessage("登录成功!");
         return result;
     }
+
     /**
      * 注册验证
      * @param userName
@@ -82,10 +95,16 @@ public class UserController extends AbstractController {
            result.setMessage("用户名已存在!");
            return result;
         }
+        String md5Pass=null;
+        try {
+            md5Pass= MD5Utils.EncoderByMd5(passWord);
+        } catch (NoSuchAlgorithmException e) {
+            logger.error("md5 encodeing error:{}",e);
+        }
         User user=new User();
-        user.setUsername(userName);
-        user.setPassword(passWord);
-        user.setEmail(email);
+        user.setUserName(userName);
+        user.setPassWord(md5Pass);
+        user.setUserName(email);
         int userId = userService.addUser(user);
         //生产token并保存于cookie中
         Map<String , Object> payload=new HashMap<String, Object>();

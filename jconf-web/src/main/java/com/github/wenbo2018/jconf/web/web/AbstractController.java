@@ -32,7 +32,10 @@ public abstract class AbstractController {
 
     protected User getUser() {
         Object o = request.getAttribute(Constants.USER_ID);
-        int userId= o == null ? 0 : (Integer) o;
+        int userId=0;
+        if (o!=null) {
+            userId= Integer.parseInt(String.valueOf(o));
+        }
         if (userId<=0) {
             return null;
         }

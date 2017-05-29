@@ -19,7 +19,7 @@ import java.io.IOException;
 /**
  * Created by wenbo.shen on 2017/5/27.
  */
-@WebFilter(filterName = "accountValidateFilter", urlPatterns = "/*")
+@WebFilter(filterName = "accountValidateFilter", urlPatterns = "/jconf/*")
 public class AccountValidateFilter implements Filter {
 
     @Autowired
@@ -34,13 +34,23 @@ public class AccountValidateFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
+        StringBuffer requestPath=request.getRequestURL();
+        boolean isPass=false;
+        if (requestPath.toString().contains("login")) {
+            isPass=true;
+            filterChain.doFilter(servletRequest,servletResponse);
+        }
         String token = WebUtils.getStringFromCookie("token", request);
         if (!StringUtils.isEmpty(token)) {
             User user=userService.loadUserByToken(token);
             if (user!=null) {
+                isPass=true;
                 request.setAttribute(Constants.USER_ID, String.valueOf(user.getUserId()));
-                doFilter(servletRequest,servletResponse,filterChain);
+                filterChain.doFilter(servletRequest,servletResponse);
             }
+        }
+        if (!isPass) {
+            response.sendRedirect("/jconf/user/login/index");
         }
     }
 
