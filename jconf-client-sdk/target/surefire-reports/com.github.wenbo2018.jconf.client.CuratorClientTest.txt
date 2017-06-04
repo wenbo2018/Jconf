@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.github.wenbo2018.jconf.client.CuratorClientTest
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.wenbo2018.jconf.web.dao.ConfigDao">
+
+    <resultMap id="BaseResultMap" type="com.github.wenbo2018.jconf.web.dto.Config">
+        <result column="Id" property="id" jdbcType="INTEGER" />
+        <result column="Config_Key" property="key" jdbcType="VARCHAR" />
+        <result column="Config_Value" property="value" jdbcType="VARCHAR" />
+        <result column="Env" property="env" jdbcType="VARCHAR" />
+        <result column="ProjectId" property="projectId" jdbcType="INTEGER" />
+        <result column="ConfigType" property="configType" jdbcType="INTEGER" />
+        <result column="UserName" property="userName" jdbcType="VARCHAR" />
+        <result column="UserEmail" property="userEmail" jdbcType="VARCHAR" />
+        <result column="DateTime" property="dateTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <insert id="add" parameterType="com.github.wenbo2018.jconf.web.dto.Config">
+        insert into Config (
+        Config_Key,
+        Config_Value,
+        ConfigType,
+        Env,
+        ProjectId,
+        UserName,
+        UserEmail,
+        DateTime
+        )
+        values (
+        #{key},
+        #{value},
+        #{configType},
+        #{env},
+        #{projectId},
+        #{userName},
+        #{userEmail},
+        CURRENT_TIMESTAMP
+        )
+    </insert>
+
+    <select id="list"  resultMap="BaseResultMap">
+        SELECT * FROM Config
+    </select>
+
+    <select id="load" resultMap="BaseResultMap" parameterType="int">
+        SELECT *FROM  Config WHERE  Id=#{id}#
+    </select>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM Config WHERE Id=#{id}#
+    </delete>
+
+    <update id="update"  >
+        UPDATE Config SET Config_Value=#{value} WHERE Id=#{id};
+    </update>
+
+
+</mapper>

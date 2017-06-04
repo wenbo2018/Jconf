@@ -1,0 +1,5 @@
+com/github/wenbo2018/jconf/core/DefaultEnsembleProvider.class
+com/github/wenbo2018/jconf/core/registry/CuratorRegistry.class
+com/github/wenbo2018/jconf/core/CuratorClient$1.class
+com/github/wenbo2018/jconf/core/CuratorClient.class
+com/github/wenbo2018/jconf/core/registry/Registry.class
