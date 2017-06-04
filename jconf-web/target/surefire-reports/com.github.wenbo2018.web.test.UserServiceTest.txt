@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: com.github.wenbo2018.web.test.UserServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.397 sec <<< FAILURE! - in com.github.wenbo2018.web.test.UserServiceTest
+loadUserByToken(com.github.wenbo2018.web.test.UserServiceTest)  Time elapsed: 0.045 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.github.wenbo2018.web.test.UserServiceTest.loadUserByToken(UserServiceTest.java:49)
+
+test_loadUserByUserNameAndPassWord_3(com.github.wenbo2018.web.test.UserServiceTest)  Time elapsed: 0.038 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.github.wenbo2018.web.test.UserServiceTest.test_loadUserByUserNameAndPassWord_3(UserServiceTest.java:37)
+
+loadUserByUserName(com.github.wenbo2018.web.test.UserServiceTest)  Time elapsed: 0.035 sec  <<< FAILURE!
+java.lang.AssertionError: null
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at com.github.wenbo2018.web.test.UserServiceTest.loadUserByUserName(UserServiceTest.java:42)
+

@@ -4,11 +4,11 @@
     <parent>
         <groupId>com.github.wenbo2018</groupId>
         <artifactId>Jconf-parent</artifactId>
-        <version>${version.project}</version>
+        <version>${v.project}</version>
     </parent>
     <artifactId>jconf-common</artifactId>
     <name>jconf-common</name>
-    <version>${version.project}</version>
+    <version>${v.project}</version>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
     <properties>
