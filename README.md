@@ -5,6 +5,19 @@ Jconf is a distributed configuration management platform.Jconf provides centrali
 changes are immediately synchronized to the client.You can use Jconf API directly in the code configuration, In spring, you can use spring
  placeholders for direct configuration without the need to configure the read problem.
 
+ ## Maven dependency
+
+ ##### latest release version is 0.0.2
+
+```xml
+    <dependency>
+        <groupId>com.github.wenbo2018</groupId>
+        <artifactId>jconf-clieng-sdk</artifactId>
+        <version>1.0.0</version>
+    </dependency>
+
+```
+
 # Quick Start
 
 Configure configuration center address
