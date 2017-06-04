@@ -10,7 +10,7 @@
         </root>
     </springProfile>
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-        <file>D:/logs/cnsurvey-order-ws.log</file>
+        <file>logs/jconf-web.log</file>
         <append>true</append><!-- 日志追加 -->
         <encoder>
             <pattern>%d{HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n

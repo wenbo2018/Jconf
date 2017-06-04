@@ -36,7 +36,7 @@ public class AccountValidateFilter implements Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         StringBuffer requestPath=request.getRequestURL();
         boolean isPass=false;
-        if (requestPath.toString().contains("login")) {
+        if (requestPath.toString().contains("login")||requestPath.toString().contains("wel")) {
             isPass=true;
             filterChain.doFilter(servletRequest,servletResponse);
         }

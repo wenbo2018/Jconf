@@ -92,7 +92,7 @@
 
 <div class="navbar navbar-default" role="navigation">
     <div class="navbar-header">
-        <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> MIPS后台管理系统</span></a>
+        <a class="" href="index.html"><span class="navbar-brand"><span class="fa fa-paper-plane"></span> Jconf</span></a>
     </div>
     <div class="navbar-collapse collapse" style="height: 1px;">
     </div>
