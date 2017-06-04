@@ -7,7 +7,7 @@ changes are immediately synchronized to the client.You can use Jconf API directl
 
  ## Maven dependency
 
- ##### latest release version is 0.0.2
+ ##### latest release version is 1.0.0
 
 ```xml
     <dependency>
@@ -34,6 +34,10 @@ cd Jconf/jconf-web
 mvn mvn package
 
 java -jar xxx.jar
+
+http://localhost:9000/jconf/wel
+ 
+check jconf-wed is success started!
 
 ##  License
 
