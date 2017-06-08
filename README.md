@@ -37,7 +37,7 @@ java -jar xxx.jar
 
 http://localhost:9000/jconf/wel
  
-check jconf-wed is success started!
+check jconf-web is success started!
 
 ##  License
 
