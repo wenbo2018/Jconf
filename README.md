@@ -12,7 +12,7 @@ changes are immediately synchronized to the client.You can use Jconf API directl
 ```xml
     <dependency>
         <groupId>com.github.wenbo2018</groupId>
-        <artifactId>jconf-clieng-sdk</artifactId>
+        <artifactId>jconf-client-sdk</artifactId>
         <version>1.0.0</version>
     </dependency>
 
