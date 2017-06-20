@@ -33,7 +33,8 @@
 </div>
 <div class="dialog">
     <div class="panel panel-default">
-        <h1 class="panel-heading no-collapse" style="text-align: center;">Jconf Started<a href="/jconf/user/login/index">>>login/a></h1>
+        <h1 class="panel-heading no-collapse" style="text-align: center;">Jconf Started</h1>
+        <h3><a href="/jconf/user/login/index">login</a></h3>
     </div>
 </div>
 </body>
