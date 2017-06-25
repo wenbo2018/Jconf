@@ -27,13 +27,13 @@ public class ConfigController extends AbstractController{
 
     @RequestMapping("/index")
     public String index() {
-        return "admin/datas";
+        return "admin/app";
     }
 
     @RequestMapping(value = "/configPagses", method = RequestMethod.GET)
     @ResponseBody
     public PageModel<Config> pageModel(int pageIndex, int pageSize) {
-        PageInfo<Config> pageInfo = configService.queryByPage(pageIndex + 1, pageSize);
+        PageInfo<Config> pageInfo = configService.queryByPage(pageIndex , pageSize);
         PageModel<Config> pageModel = new PageModel<Config>();
         pageModel.setList(pageInfo.getList());
         pageModel.setPageIndex(pageInfo.getPageNum());
@@ -44,15 +44,19 @@ public class ConfigController extends AbstractController{
 
     @ResponseBody
     @RequestMapping(value = "/add")
-    public CommonResultJson configUpdate(String key, String value, @Param("false") Integer env, @Param("false") Integer projectId, Integer  cofing_type) {
+    public CommonResultJson configUpdate(String configKey,
+                                         String configValue,
+                                         Integer  configType,
+                                         String configEnvironmentStr,
+                                         String projectName) {
         CommonResultJson result = new CommonResultJson();
         result.setCode(ResultCode.SUCCESS);
-        if (StringUtils.isEmpty(key)||StringUtils.isEmpty(value)|| cofing_type<=0) {
+        if (StringUtils.isEmpty(configKey)||StringUtils.isEmpty(configValue)|| configType<=0||StringUtils.isEmpty(projectName)) {
             result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("请输入完整的参数");
             return result;
         }
-        if (projectId<=0||env<=0) {
+        if (configEnvironmentStr==null) {
             result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("请输入完整的参数");
             return result;
@@ -63,12 +67,13 @@ public class ConfigController extends AbstractController{
             result.setMessage("服务端异常!");
             return result;
         }
+
         Config config=new Config();
-        config.setEnv(env);
-        config.setKey(key);
-        config.setProjectId(projectId);
-        config.setConfigType(cofing_type);
-        config.setValue(value);
+        config.setEnv(configEnvironmentStr);
+        config.setKey(configKey);
+        config.setProjectName(projectName);
+        config.setConfigType(configType);
+        config.setValue(configValue);
         config.setUserName(user.getUserName());
         config.setUserEmail(user.getUserEmail());
         configService.add(config);

@@ -18,4 +18,5 @@ public interface ConfigDao {
     Config load(int id);
 
     void update( @Param("id") int id,@Param("value") String value);
+
 }

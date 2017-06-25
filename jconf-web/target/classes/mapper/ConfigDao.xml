@@ -8,7 +8,7 @@
         <result column="Config_Key" property="key" jdbcType="VARCHAR" />
         <result column="Config_Value" property="value" jdbcType="VARCHAR" />
         <result column="Env" property="env" jdbcType="VARCHAR" />
-        <result column="ProjectId" property="projectId" jdbcType="INTEGER" />
+        <result column="ProjectName" property="projectName" jdbcType="VARCHAR" />
         <result column="ConfigType" property="configType" jdbcType="INTEGER" />
         <result column="UserName" property="userName" jdbcType="VARCHAR" />
         <result column="UserEmail" property="userEmail" jdbcType="VARCHAR" />
@@ -21,7 +21,7 @@
         Config_Value,
         ConfigType,
         Env,
-        ProjectId,
+        ProjectName,
         UserName,
         UserEmail,
         DateTime
@@ -31,7 +31,7 @@
         #{value},
         #{configType},
         #{env},
-        #{projectId},
+        #{projectName},
         #{userName},
         #{userEmail},
         CURRENT_TIMESTAMP
