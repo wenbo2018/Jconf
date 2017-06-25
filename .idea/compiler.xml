@@ -7,16 +7,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="jconf-client" />
+        <module name="jconf-client-sdk" />
         <module name="jconf-common" />
-        <module name="jconf-core" />
-        <module name="jconf-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="jconf-client" target="1.7" />
+      <module name="jconf-client-sdk" target="1.7" />
       <module name="jconf-common" target="1.7" />
       <module name="jconf-core" target="1.7" />
-      <module name="Jconf-parent" target="1.6" />
+      <module name="Jconf-parent" target="1.5" />
       <module name="jconf-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>

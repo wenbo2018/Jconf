@@ -14,8 +14,8 @@ public class Config {
     private int id;
     private String key;
     private String value;
-    private int env;
-    private int  projectId;
+    private String env;
+    private String  projectName;
     private int configType;
     private String userName;
     private String userEmail;
