@@ -19,5 +19,7 @@ public class Config {
     private int configType;
     private String userName;
     private String userEmail;
+    private int status;
     private Date dateTime;
+
 }

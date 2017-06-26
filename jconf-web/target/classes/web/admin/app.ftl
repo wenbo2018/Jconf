@@ -10,8 +10,8 @@
 
 <div id="app">
     <!--导航配置栏-->
-    <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1"><span style="font-size:x-large;" >Jconf配置管理平台</span></el-menu-item>
+    <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+        <el-menu-item index="1"><span style="font-size:x-large;">Jconf配置管理平台</span></el-menu-item>
         <el-menu-item index="2"><span style="font-size:larger;">配置管理</span></el-menu-item>
         <el-menu-item index="3"><span style="font-size:larger;">系统监控</span></el-menu-item>
         <el-menu-item index="4"><span style="font-size:larger;">权限管理</span></el-menu-item>
@@ -25,7 +25,7 @@
         <el-form :inline="true" :model="formInline" class="demo-form-inline">
             <el-form-item label="Key" style="font-size:larger;">
                 <template>
-                    <el-select v-model="value9"    multiple filterable="" remote placeholder="根据key或者项目名称搜索"
+                    <el-select v-model="value9" multiple filterable="" remote placeholder="根据key或者项目名称搜索"
                                :remote-method="remoteMethod" :loading="loading" style="width:400px;">
                         <el-option v-for="item in options4" :key="item.value" :label="item.label" :value="item.value">
                         </el-option>
@@ -46,28 +46,28 @@
     <el-dialog title="新增配置" :visible.sync="dialogFormVisible">
         <el-form :model="configDataAdd" :rules="rules" ref="configDataAdd" label-width="100px" class="demo-ruleForm">
 
-            <el-form-item label="Key" prop="configKey" required>
-                <el-input v-model="configDataAdd.configKey"></el-input>
+            <el-form-item label="Key" prop="key" required>
+                <el-input v-model="configDataAdd.key"></el-input>
             </el-form-item>
 
-            <el-form-item label="Value" prop="configValue" required>
-                <el-input type="textarea" v-model="configDataAdd.configValue"></el-input>
+            <el-form-item label="Value" prop="value" required>
+                <el-input type="textarea" v-model="configDataAdd.value"></el-input>
             </el-form-item>
 
             <el-form-item label="类型" prop="configType">
                 <el-select v-model="configDataAdd.configType" placeholder="请选择类型">
-                    <el-option label="String" value="1"></el-option>
-                    <el-option label="Integer" value="2"></el-option>
-                    <el-option label="Boolean" value="3"></el-option>
+                    <el-option value="1">String</el-option>
+                    <el-option value="2">Integer</el-option>
+                    <el-option value="3">Boolean</el-option>
                 </el-select>
             </el-form-item>
 
 
-            <el-form-item label="配置环境" prop="configEnvironment" required>
-                <el-checkbox-group v-model="configDataAdd.configEnvironment">
-                    <el-checkbox label="1" name="configEnvironment">Dev/开发环境</el-checkbox>
-                    <el-checkbox label="2" name="configEnvironment">Beta/测试环境</el-checkbox>
-                    <el-checkbox label="3" name="configEnvironment">Pro/线上环境</el-checkbox>
+            <el-form-item label="配置环境" prop="env" required>
+                <el-checkbox-group v-model="configDataAdd.env">
+                    <el-checkbox label="1" name="env">Dev/开发环境</el-checkbox>
+                    <el-checkbox label="2" name="env">Beta/测试环境</el-checkbox>
+                    <el-checkbox label="3" name="env">Pro/线上环境</el-checkbox>
                 </el-checkbox-group>
             </el-form-item>
 
@@ -79,29 +79,28 @@
     </el-dialog>
 
 
-
     <!--修改配置弹出页-->
     <el-dialog title="修改配置" :visible.sync="dialogUpdateFormVisible">
-        <el-form :model="updateConfigData"  :rules="rules" ref="updateConfigData" label-width="100px" class="demo-ruleForm">
-            <el-form-item label="Key" prop="configKey" required>
-                <el-input v-model="updateConfigData.configKey" value="ddd"></el-input>
+        <el-form :model="updateConfigData" :rules="rules" label-width="100px" class="demo-ruleForm-edit">
+            <el-form-item label="Key" prop="key" required>
+                <el-input v-model="updateConfigData.key" :disabled="true"></el-input>
             </el-form-item>
             <el-form-item label="Value" prop="updateConfigData" required>
-                <el-input type="textarea" v-model="updateConfigData.configValue"></el-input>
+                <el-input type="textarea" v-model="updateConfigData.value"></el-input>
             </el-form-item>
             <el-form-item label="类型" prop="configType">
                 <el-select v-model="updateConfigData.configType" placeholder="请选择类型">
-                    <el-option label="String" value="1"></el-option>
-                    <el-option label="Integer" value="2"></el-option>
-                    <el-option label="Boolean" value="3"></el-option>
+                    <el-option value="1==configType">String</el-option>
+                    <el-option value="2==configType">Integer</el-option>
+                    <el-option value="3==configType">Boolean</el-option>
                 </el-select>
             </el-form-item>
 
-            <el-form-item label="配置环境" prop="configEnvironment" required>
-                <el-checkbox-group v-model="updateConfigData.configEnvironment">
-                    <el-checkbox label="1" name="configEnvironment">Dev/开发环境</el-checkbox>
-                    <el-checkbox label="2" name="configEnvironment">Beta/测试环境</el-checkbox>
-                    <el-checkbox label="3" name="configEnvironment">Pro/线上环境</el-checkbox>
+            <el-form-item label="配置环境" prop="env" required>
+                <el-checkbox-group v-model="updateConfigData.env">
+                    <el-checkbox label="1" name="env==1">Dev/开发环境</el-checkbox>
+                    <el-checkbox label="2" name="env==2">Beta/测试环境</el-checkbox>
+                    <el-checkbox label="3" name="env==3">Pro/线上环境</el-checkbox>
                 </el-checkbox-group>
             </el-form-item>
 
@@ -113,19 +112,17 @@
     </el-dialog>
 
 
-
-
     <!--table组件-->
     <template>
-        <el-table :data="tableData" border style="width: 90%;margin-left:5%;" >
+        <el-table :data="tableData" border style="width: 90%;margin-left:5%;">
             <el-table-column label="#" width="80" align="center">
                 <template scope="scope">
                     <span>{{ scope.row.id }}</span>
                 </template>
             </el-table-column>
-            <el-table-column label="Key"  align="center">
+            <el-table-column label="Key" align="center">
                 <template scope="scope">
-                    <span >{{ scope.row.key}}</span>
+                    <span>{{ scope.row.key}}</span>
                 </template>
             </el-table-column>
             <el-table-column label="Value" width="80" align="center">
@@ -146,10 +143,10 @@
 
             <el-table-column label="环境" width="150" align="center">
                 <template scope="scope">
-                    <div v-for="env in scope.row.env.split(',')" style="float: left;margin-left:1px;">
-                        <span v-show="env==1"><el-tag color="FF3300" type="success">Pro</el-tag></span>
-                        <span v-show="env==2"><el-tag type="gray">Beta</el-tag></span>
-                        <span v-show="env==3"><el-tag type="primary">Dev</el-tag></span>
+                    <div v-for="e in scope.row.env" style="float: left;margin-left:1px;">
+                        <span v-show="e==1"><el-tag color="FF3300" type="success">Pro</el-tag></span>
+                        <span v-show="e==2"><el-tag type="gray">Beta</el-tag></span>
+                        <span v-show="e==3"><el-tag type="primary">Dev</el-tag></span>
                     </div>
                 </template>
             </el-table-column>
@@ -175,7 +172,7 @@
             <el-table-column label="状态" width="140" align="center">
                 <template scope="scope">
                     <el-button size="small" type="success">启用</el-button>
-                    <el-button size="small" >停止</el-button>
+                    <el-button size="small">停止</el-button>
                 </template>
             </el-table-column>
 
@@ -204,10 +201,10 @@
     </div>
 
 
-    <el-dialog title="提示" :visible.sync="deleteDialogVisible" size="tiny" :before-close="handleClose">
+    <el-dialog title="提示" :visible.sync="deleteDialogVisible" size="tiny">
         <span>确定要删除?删除前请确认业务方下线该配置!</span>
-            <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false">取 消</el-button>
+        <span slot="footer" class="dialog-footer">
+        <el-button @click="deleteDialogVisible=false">取 消</el-button>
         <el-button type="primary" @click="handleDeleteDown">确 定</el-button>
       </span>
     </el-dialog>

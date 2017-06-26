@@ -9,13 +9,13 @@ var vue = new Vue({
         },
         project:"test",
         dialogFormVisible: false,
+        dialogUpdateFormVisible:false,
         deleteDialogVisible:false,
         configDataAdd: {
-            configKey: '',
-            configValue: '',
+            key: '',
+            value: '',
             configType:0,
-            configEnvironment:[],
-            configEnvironmentStr:"",
+            env:[],
             projectName:""
         },
         options: [{
@@ -54,13 +54,13 @@ var vue = new Vue({
             "Washington", "West Virginia", "Wisconsin",
             "Wyoming"],
         rules: {
-            configKey: [
+            key: [
                 {required: true, message: '请输入配置key', trigger: 'change'}
             ],
-            configValue: [
+            value: [
                 {required: true, message: '请输入配置value', trigger: 'change'}
             ],
-            configEnvironment: [
+            env: [
                 {required: true, message: '请选择配置环境', trigger: 'change'}
             ]
         },
@@ -73,11 +73,10 @@ var vue = new Vue({
 
 
         updateConfigData:{
-            configKey: 'ddd',
-            configValue: 'ddd',
+            key: 'ddd',
+            value: 'ddd',
             configType:0,
-            configEnvironment:[],
-            configEnvironmentStr:"",
+            env:[],
             projectName:""
         }
 
@@ -110,7 +109,6 @@ var vue = new Vue({
         submitForm() {
             var vm = this;
             vm.configDataAdd.projectName=vm.project;
-            vm.configDataAdd.configEnvironmentStr=this.configDataAdd.configEnvironment.toString();
             callback = function (data) {
                if(data.code=="200") {
                    vm.$message({message: '成功创建一条配置', type: 'success'});
@@ -118,7 +116,7 @@ var vue = new Vue({
                } else if (data.code=="500"){
                    vm.$message.error('服务器开小差了');
                } else {
-                   this.$message({showClose: true, message:data.message});
+                   vm.$message({showClose: true, message:data.message});
                }
             }
             ajaxHelper.post("/jconf/admin/config/add", vm.configDataAdd, callback);
@@ -136,6 +134,10 @@ var vue = new Vue({
             vm.currentTableRow=row;
             vm.currentTableRowIndex=index;
         },
+        resetForm(formName) {
+            this.$refs[formName].resetFields();
+        }
+        ,
         handleDeleteDown() {
             var row=this.currentTableRow;
             var queryparams={id:row.id};

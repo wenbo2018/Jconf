@@ -9,6 +9,7 @@ import java.util.List;
  * Created by shenwenbo on 2017/4/16.
  */
 public interface ConfigDao {
+
     void add(Config config);
 
     List<Config> list();
@@ -17,6 +18,6 @@ public interface ConfigDao {
 
     Config load(int id);
 
-    void update( @Param("id") int id,@Param("value") String value);
+    void update(Config config);
 
 }
