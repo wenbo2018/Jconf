@@ -41,7 +41,7 @@ check jconf-web is success started!
 
 Jconf web admin
 ==================================
- ![image](https://github.com/wenbo2018/Jconf/blob/master/resources/ui.jpeg)
+ ![image](https://github.com/wenbo2018/Jconf/blob/master/resources/UI.jpeg)
 
 ##  License
 

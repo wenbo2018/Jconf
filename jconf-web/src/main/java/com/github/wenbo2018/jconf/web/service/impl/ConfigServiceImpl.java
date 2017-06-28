@@ -28,8 +28,8 @@ public class ConfigServiceImpl implements ConfigService {
 
     @Override
     public void delete(int id) {
-        Config config=configDao.load(id);
-        if (config!=null) {
+        Config config =configDao.load(id);
+        if (config !=null) {
             RegistryManager.unregisterService(config.getKey());
         }
         configDao.delete(id);
@@ -47,12 +47,12 @@ public class ConfigServiceImpl implements ConfigService {
     }
 
     @Override
-    public void update(int id, String value) {
-        Config config=configDao.load(id);
-        if (config!=null) {
-            RegistryManager.registerService(config.getKey(),value);
-        }
-        configDao.update(id,value);
+    public void update(Config config) {
+        configDao.update(config);
     }
 
+    @Override
+    public Config load(int id) {
+        return configDao.load(id);
+    }
 }

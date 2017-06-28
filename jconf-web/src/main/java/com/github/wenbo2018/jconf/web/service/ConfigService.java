@@ -11,5 +11,7 @@ public interface ConfigService {
     void add(Config config);
     void delete(int id);
     PageInfo<Config> queryByPage(Integer pageIndex, Integer pageSize);
-    void update(int id,String value);
+    void update(Config config);
+    Config load(int id);
+
 }

@@ -1,13 +1,8 @@
 package com.github.wenbo2018.web.test;
 
-import com.github.wenbo2018.jconf.web.Application;
-import com.github.wenbo2018.jconf.web.dto.Config;
 import com.github.wenbo2018.jconf.web.service.ConfigService;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
  * Created by shenwenbo on 2017/4/16.

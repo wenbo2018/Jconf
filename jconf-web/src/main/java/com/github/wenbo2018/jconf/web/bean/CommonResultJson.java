@@ -16,4 +16,9 @@ public class CommonResultJson {
     private String message;
     private Map<String,Object> datas=new HashMap<String, Object>();
 
+    public void setDataObject(String key,Object value){
+        datas.put(key,value);
+    }
+
+
 }
