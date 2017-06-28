@@ -105,7 +105,7 @@
             </el-form-item>
 
             <el-form-item>
-                <el-button type="primary" @click="submitForm('updateConfigData')">立即修改</el-button>
+                <el-button type="primary" @click="updateConfig('updateConfigData')">立即修改</el-button>
                 <el-button @click="resetForm('updateConfigData')">重置</el-button>
             </el-form-item>
         </el-form>
@@ -120,7 +120,7 @@
                     <span>{{ scope.row.id }}</span>
                 </template>
             </el-table-column>
-            <el-table-column label="Key" align="center">
+            <el-table-column label="Key" align="center" width="150">
                 <template scope="scope">
                     <span>{{ scope.row.key}}</span>
                 </template>
@@ -135,7 +135,7 @@
                     </el-popover>
                 </template>
             </el-table-column>
-            <el-table-column label="类型" width="90" align="center">
+            <el-table-column label="类型" width="80" align="center">
                 <template scope="scope">
                     <span>String</span>
                 </template>
@@ -157,7 +157,7 @@
                 </template>
             </el-table-column>
 
-            <el-table-column label="修改时间" width="180" align="center">
+            <el-table-column label="修改时间" width="190" align="center">
                 <template scope="scope">
                     <span>{{ scope.row.dateTime}}</span>
                 </template>
@@ -169,15 +169,17 @@
                 </template>
             </el-table-column>
 
-            <el-table-column label="状态" width="140" align="center">
+            <el-table-column label="状态" width="65" align="center">
                 <template scope="scope">
-                    <el-button size="small" type="success">启用</el-button>
-                    <el-button size="small">停止</el-button>
+                    <span v-if="scope.row.status==1" style="color:#2eb22d" >正常</span>
+                    <span v-else style="color:#9baca8">禁用</span>
                 </template>
             </el-table-column>
 
-            <el-table-column label="操作" width="140" align="center">
+            <el-table-column label="操作" width="280" align="center">
                 <template scope="scope">
+                    <el-button size="small" type="success" @click="updateStatus(scope.$index, scope.row)">启用</el-button>
+                    <el-button size="small" @click="updateStatus(scope.$index, scope.row)">禁用</el-button>
                     <el-button size="small" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
                     <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
                 </template>

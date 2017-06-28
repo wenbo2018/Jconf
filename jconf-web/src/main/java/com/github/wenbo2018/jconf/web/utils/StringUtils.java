@@ -9,7 +9,7 @@ public class StringUtils {
     public static String arrayToString(String[] array) {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < array.length; i++) {
-            if (i == array.length) {
+            if (i == (array.length-1)) {
                 sb.append(array[i]);
             } else {
                 sb.append(array[i]+",");

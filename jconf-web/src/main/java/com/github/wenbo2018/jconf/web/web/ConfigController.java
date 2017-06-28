@@ -117,17 +117,33 @@ public class ConfigController extends AbstractController {
 
     @ResponseBody
     @RequestMapping(value = "/update")
-    public CommonResultJson configUpdate(int id, String value) {
+    public CommonResultJson configUpdate(Integer id,
+                                         String value,
+                                         Integer configType,
+                                         @RequestParam(value = "env[]") String[] env) {
         CommonResultJson result = new CommonResultJson();
         result.setCode(ResultCode.SUCCESS);
-        if (id <= 0 || value == null) {
+        if (id <= 0 ||configType<=0|| value == null||env==null||env.length<=0) {
             result.setCode(ResultCode.PARAMETER_ERROR);
             result.setMessage("参数不合法！");
             return result;
         }
         Config config=configService.load(id);
         config.setValue(value);
+        config.setConfigType(configType);
+        config.setEnv(com.github.wenbo2018.jconf.web.utils.StringUtils.arrayToString(env));
         configService.update(config);
+        ConfigVo configVo=new ConfigVo();
+        configVo.setConfigType(config.getConfigType());
+        configVo.setDateTime(config.getDateTime());
+        configVo.setId(config.getId());
+        config.setProjectName(config.getProjectName());
+        configVo.setKey(config.getKey());
+        configVo.setUserName(config.getUserName());
+        configVo.setValue(config.getValue());
+        configVo.setEnv(config.getEnv().split(","));
+        configVo.setStatus(config.getStatus());
+        result.setDataObject("configVo",configVo);
         return result;
     }
 
@@ -142,8 +158,20 @@ public class ConfigController extends AbstractController {
             return result;
         }
         Config config=configService.load(id);
-        config.setStatus(-config.getStatus());
+        int status=-config.getStatus();
+        config.setStatus(status);
         configService.update(config);
+        ConfigVo configVo=new ConfigVo();
+        configVo.setConfigType(config.getConfigType());
+        configVo.setDateTime(config.getDateTime());
+        configVo.setId(config.getId());
+        config.setProjectName(config.getProjectName());
+        configVo.setKey(config.getKey());
+        configVo.setUserName(config.getUserName());
+        configVo.setValue(config.getValue());
+        configVo.setEnv(config.getEnv().split(","));
+        configVo.setStatus(config.getStatus());
+        result.setDataObject("configVo",configVo);
         return result;
     }
 

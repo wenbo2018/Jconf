@@ -4,14 +4,15 @@
 <mapper namespace="com.github.wenbo2018.jconf.web.dao.ConfigDao">
 
     <resultMap id="BaseResultMap" type="com.github.wenbo2018.jconf.web.dto.Config">
-        <result column="Id" property="id" jdbcType="INTEGER" />
-        <result column="Config_Key" property="key" jdbcType="VARCHAR" />
-        <result column="Config_Value" property="value" jdbcType="VARCHAR" />
-        <result column="Env" property="env" jdbcType="VARCHAR" />
-        <result column="ProjectName" property="projectName" jdbcType="VARCHAR" />
-        <result column="ConfigType" property="configType" jdbcType="INTEGER" />
-        <result column="UserName" property="userName" jdbcType="VARCHAR" />
-        <result column="UserEmail" property="userEmail" jdbcType="VARCHAR" />
+        <result column="Id" property="id" jdbcType="INTEGER"/>
+        <result column="Config_Key" property="key" jdbcType="VARCHAR"/>
+        <result column="Config_Value" property="value" jdbcType="VARCHAR"/>
+        <result column="Env" property="env" jdbcType="VARCHAR"/>
+        <result column="ProjectName" property="projectName" jdbcType="VARCHAR"/>
+        <result column="ConfigType" property="configType" jdbcType="INTEGER"/>
+        <result column="UserName" property="userName" jdbcType="VARCHAR"/>
+        <result column="UserEmail" property="userEmail" jdbcType="VARCHAR"/>
+        <result column="Status" property="status" jdbcType="INTEGER"/>
         <result column="DateTime" property="dateTime" jdbcType="TIMESTAMP"/>
     </resultMap>
 
@@ -38,7 +39,21 @@
         )
     </insert>
 
-    <select id="list"  resultMap="BaseResultMap">
+    <update id="update" parameterType="com.github.wenbo2018.jconf.web.dto.Config">
+        UPDATE  Config SET
+        Config_Key=#{key},
+        Config_Value=#{value},
+        Env= #{env},
+        ProjectName= #{projectName},
+        UserName= #{userName},
+        ConfigType= #{configType},
+        UserEmail= #{userEmail},
+        Status=#{status},
+        DateTime= CURRENT_TIMESTAMP
+        WHERE Id=#{id}
+    </update>
+
+    <select id="list" resultMap="BaseResultMap">
         SELECT * FROM Config
     </select>
 
@@ -49,10 +64,5 @@
     <delete id="delete" parameterType="int">
         DELETE FROM Config WHERE Id=#{id}#
     </delete>
-
-    <update id="update"  >
-        UPDATE Config SET Config_Value=#{value} WHERE Id=#{id};
-    </update>
-
 
 </mapper>

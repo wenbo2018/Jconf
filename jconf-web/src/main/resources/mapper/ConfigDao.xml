@@ -48,6 +48,7 @@
         UserName= #{userName},
         ConfigType= #{configType},
         UserEmail= #{userEmail},
+        Status=#{status},
         DateTime= CURRENT_TIMESTAMP
         WHERE Id=#{id}
     </update>

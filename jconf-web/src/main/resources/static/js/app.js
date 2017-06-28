@@ -73,6 +73,7 @@ var vue = new Vue({
 
 
         updateConfigData:{
+            id:0,
             key: 'ddd',
             value: 'ddd',
             configType:0,
@@ -121,6 +122,39 @@ var vue = new Vue({
             }
             ajaxHelper.post("/jconf/admin/config/add", vm.configDataAdd, callback);
         },
+        updateConfig() {
+            var vm = this;
+            vm.updateConfigData.projectName=vm.project;
+            callback = function (data) {
+                if(data.code=="200") {
+                    vm.$message({message: '修改配置成功', type: 'success'});
+                    vm.dialogUpdateFormVisible=false;
+                    vm.currentTableRowIndex=data.datas.configVo;
+                } else if (data.code=="500"){
+                    vm.$message.error('服务器开小差了');
+                } else {
+                    vm.$message({showClose: true, message:data.message});
+                }
+            }
+            ajaxHelper.post("/jconf/admin/config/update", vm.updateConfigData, callback);
+        },
+        updateStatus(index, row) {
+            var vm = this;
+            var queryparams={id:row.id};
+            vm.configDataAdd.projectName=vm.project;
+            callback = function (data) {
+                if(data.code=="200") {
+                    vm.$message({message: '更新配置状态成功', type: 'success'});
+                    vm.tableData[index].status=data.datas.configVo.status;
+                } else if (data.code=="500"){
+                    vm.$message.error('服务器开小差了');
+                } else {
+                    vm.$message({showClose: true, message:data.message});
+                }
+            }
+            ajaxHelper.post("/jconf/admin/config/updateStatus", queryparams, callback);
+        }
+        ,
         handleEdit(index, row) {
             var vm = this;
             vm.currentTableRow=row;
