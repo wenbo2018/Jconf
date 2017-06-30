@@ -6,16 +6,25 @@
     <title></title>
     <link rel="stylesheet" href="/css/index.css"/>
 </head>
+<style type="text/css">
+    .table_key_class,.table_date_class {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .el-menu--horizontal .el-menu-item{
+        line-height: 85px;
+    }
+</style>
 <body style="margin: 0px;">
 
 <div id="app">
     <!--导航配置栏-->
-    <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-        <el-menu-item index="1"><span style="font-size:x-large;">Jconf配置管理平台</span></el-menu-item>
-        <el-menu-item index="2"><span style="font-size:larger;">配置管理</span></el-menu-item>
-        <el-menu-item index="3"><span style="font-size:larger;">系统监控</span></el-menu-item>
-        <el-menu-item index="4"><span style="font-size:larger;">权限管理</span></el-menu-item>
-        <el-menu-item index="5"><span style="font-size:larger;">系统管理</span></el-menu-item>
+    <el-menu theme="dark" :default-active="activeIndex" style="height:80px;" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item style="height:80px;" index="1"><span style="font-size:x-large;"><img style="height:80px;" src="/img/jconf-log.png"></img></el-menu-item>
+        <el-menu-item style="height:80px;" index="2"><span style="font-size:larger;">系统监控</span></el-menu-item>
+        <el-menu-item style="height:80px;" index="3"><span style="font-size:larger;">配置管理</span></el-menu-item>
+        <el-menu-item style="height:80px;" index="4"><span style="font-size:larger;">权限管理</span></el-menu-item>
+        <el-menu-item style="height:80px;" index="5"><span style="font-size:larger;">系统管理</span></el-menu-item>
     </el-menu>
     <div class="line" style="margin-top: 20px;"></div>
 
@@ -56,7 +65,7 @@
 
             <el-form-item label="类型" prop="configType">
                 <el-select v-model="configDataAdd.configType" placeholder="请选择类型">
-                    <el-option value="1">String</el-option>
+                    <el-option  value="1">String</el-option>
                     <el-option value="2">Integer</el-option>
                     <el-option value="3">Boolean</el-option>
                 </el-select>
@@ -115,14 +124,14 @@
     <!--table组件-->
     <template>
         <el-table :data="tableData" border style="width: 90%;margin-left:5%;">
-            <el-table-column label="#" width="80" align="center">
+            <#--<el-table-column label="#" width="90" align="center">-->
+                <#--<template scope="scope">-->
+                    <#--<span>{{ scope.row.id }}</span>-->
+                <#--</template>-->
+            <#--</el-table-column>-->
+            <el-table-column label="Key" align="center" width="220">
                 <template scope="scope">
-                    <span>{{ scope.row.id }}</span>
-                </template>
-            </el-table-column>
-            <el-table-column label="Key" align="center" width="150">
-                <template scope="scope">
-                    <span>{{ scope.row.key}}</span>
+                    <span class="table_key_class" :title="scope.row.key">{{ scope.row.key}}</span>
                 </template>
             </el-table-column>
             <el-table-column label="Value" width="80" align="center">
@@ -159,7 +168,7 @@
 
             <el-table-column label="修改时间" width="190" align="center">
                 <template scope="scope">
-                    <span>{{ scope.row.dateTime}}</span>
+                    <span class="table_date_class" :title="scope.row.dateTime">{{ scope.row.dateTime}}</span>
                 </template>
             </el-table-column>
 

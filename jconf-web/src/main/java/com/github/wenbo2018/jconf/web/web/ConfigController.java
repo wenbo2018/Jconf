@@ -33,7 +33,7 @@ public class ConfigController extends AbstractController {
 
     @RequestMapping("/index")
     public String index() {
-        return "admin/app";
+        return "admin/configIndex";
     }
 
     @RequestMapping(value = "/configPagses", method = RequestMethod.GET)
