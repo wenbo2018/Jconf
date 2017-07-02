@@ -11,9 +11,7 @@
     <bean class="com.github.wenbo2018.jconf.client.spring.JconfigSpringSupport"/>
 
     <bean id="user" class="com.github.wenbo2018.demo.bean.User">
-        <property name="userName">
-            <value>${https}</value>
-        </property>
+        <property name="userName" value="${jdbc.url}"/>
     </bean>
 
 </beans>
