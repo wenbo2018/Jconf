@@ -3,14 +3,13 @@
 
 ![image](https://github.com/wenbo2018/Jconf/blob/master/resources/jconf-log.jpeg)
 
-
 Jconf is a distributed configuration management platform.Jconf provides centralized management of configuration, and the configuration 
 changes are immediately synchronized to the client.You can use Jconf API directly in the code configuration, In spring, you can use spring
  placeholders for direct configuration without the need to configure the read problem.
 
- ## Maven dependency
+## Maven dependency
 
- ##### latest release version is 1.0.0
+### latest release version is 1.0.0
 
 ```xml
     <dependency>
@@ -23,16 +22,29 @@ changes are immediately synchronized to the client.You can use Jconf API directl
 
 # Quick Start
 
-Configure configuration center address
+1.Configure configuration center address,you need to configure the following files in the specified folder。
 
 /data/app/jconf.properties(Linux),C:/data/app/jconf.properties(Win)
 
-jconf.properties:
-zookeeper.register.address=170.0.0.1,170.0.0.2,170.0.0.3
+```xml
+jconf.properties:zookeeper.register.address=170.0.0.1,170.0.0.2,170.0.0.3
+
+```
+2.Add Maven dependency with latest release version.
+
+3.Configuring in Spring
+
+```xml
+    <bean class="com.github.wenbo2018.jconf.client.spring.JconfigSpringSupport"/>
+```
+
+# Jconf-admin-web Start
+
+Jconf provides a background management system for centralized management of your configuration that is jconf-admin-web,jconf-admin-web was developed by Spring BOOT.You can make it easy to run.
 
 git clone git@github.com:wenbo2018/Jconf.git
 
-cd Jconf/jconf-web
+cd Jconf/jconf-admin-web
 
 mvn mvn package
 
@@ -40,7 +52,7 @@ java -jar xxx.jar
 
 http://localhost:9000/jconf/wel
  
-check jconf-web is success started!
+check Jconf Application started!
 
 Jconf web admin
 ==================================
