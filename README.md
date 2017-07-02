@@ -42,6 +42,9 @@ jconf.properties:zookeeper.register.address=170.0.0.1,170.0.0.2,170.0.0.3
 
 Jconf provides a background management system for centralized management of your configuration that is jconf-admin-web,jconf-admin-web was developed by Spring BOOT.You can make it easy to run.
 
+
+```xml
+
 git clone git@github.com:wenbo2018/Jconf.git
 
 cd Jconf/jconf-admin-web
@@ -53,6 +56,8 @@ java -jar xxx.jar
 http://localhost:9000/jconf/wel
  
 check Jconf Application started!
+
+```
 
 Jconf web admin
 ==================================
